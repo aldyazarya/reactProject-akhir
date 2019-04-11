@@ -1,0 +1,240 @@
+.container {
+    padding: 0 0 0 0;
+}
+
+.logincard .card {
+    margin: 150px 519px 95px 518px;
+    background: whitesmoke;
+    width: 329px !important;
+    height: 523px !important;
+    border-radius: 8px;
+    box-shadow: 5px 10px 10px rgba(0,0,0,0.30);
+    margin-bottom: 350px;
+}
+
+.logincard .card-body {
+    padding: 0 0 0 0;
+}
+
+.logincard .card-body .login {
+    padding: 0 0 0 0;
+    margin: 40px auto 40px auto;
+    font-family: 'Montserrat';
+    font-size: 23px; 
+    font-weight: 700;
+    width: 68px;
+    height: 28px;
+}
+
+.logincard .card-body .username {
+    width: 260px;
+    height: 48.5px;
+}
+.logincard .card-body .username p {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-family: 'Montserrat' ;
+    font-size: 10px;
+    font-weight: 700;
+    width: fit-content !important;
+    height: fit-content !important;
+}
+
+.logincard .username .input i {
+    margin: 11px 0 0 0;
+    padding: 0 0 0 0;
+    width: 14px;
+    height: 14px;
+    color: #797979;
+
+}
+.logincard .username .input input {
+    padding: 0 0 0px 0;
+    margin: 10px 0 11.5px 15px;
+    border-width: 0 0 0 0;
+    height: fit-content;
+    width: fit-content;
+    color: black;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    font-weight: 400;
+}
+.logincard .username .input input::placeholder {
+    color:#797979;
+    font-size: 10px;
+    font-family: 'Montserrat';
+    font-weight: 200;
+    background-color: transparent;
+
+}
+.logincard .username .input input:focus {
+    outline: none;
+}
+
+.logincard .garis1 {
+    margin: 0 0 0 0px;
+}
+
+.logincard .card-body .password {
+    width: 260px;
+    height: 48.5px;
+    margin-top: 22.5px;
+}
+.logincard .password p {
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+    font-family: 'Montserrat' ;
+    font-size: 10px;
+    font-weight: 700;
+    width: fit-content;
+    height: fit-content;
+}
+
+.logincard .password .input i {
+    margin: 11px 0 0 0;
+    padding: 0 0 0 0;
+    width: 15px;
+    height: 15px;
+    color: #797979;
+
+}
+.logincard .password .input input {
+    padding: 0 0 0px 0;
+    margin: 10px 0 11.5px 15px;
+    border-width: 0 0 0 0;
+    height: fit-content;
+    width: fit-content;
+    color: black;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    font-weight: 400;
+}
+.logincard .password .input input::placeholder {
+    color:#797979;
+    font-size: 10px;
+    font-family: 'Montserrat';
+    font-weight: 200;
+    background-color: transparent;
+
+}
+.logincard .password .input input:focus {
+    outline: none;
+}
+
+.logincard .forgetpassword {
+    width: 260px;
+    height: fit-content;
+}
+.logincard .forgetpassword a {
+    text-decoration: none;
+    color: #797979;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    font-weight: 400;
+    width: 80px;
+    height: 11px;
+    margin-left: 170px;
+}
+.logincard .forgetpassword a:hover {
+    text-decoration: none;
+    color: black;
+}
+.logincard .button-login {
+    background: rgb(204,194,162);
+    background: linear-gradient(342deg, rgba(204,194,162,1) 0%, rgba(255,108,0,1) 1%, rgba(204,194,162,1) 100%, rgba(255,108,0,1) 100%);
+    border-width: 0 0 0 0 ;
+  border-radius: 18px;
+  font-family: 'Montserrat' ;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  margin: 37px 34px 28px 35px;
+  padding: 0 0;
+  text-align: center;
+  text-shadow: 0 -1px 1px #64799e;
+  text-transform: uppercase;
+  width: 260px; 
+  height: 24px;
+}
+
+.logincard   .button-login:hover {
+    background-color: #9badcc;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9badcc), color-stop(100%, #687fa6));
+    background-image: -webkit-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -moz-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -ms-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -o-linear-gradient(top, #9badcc, #687fa6);
+    background-image: linear-gradient(top, #9badcc, #687fa6);
+    
+    -webkit-box-shadow: outset 0 1px 0 0 #a5b9d9;
+    box-shadow: outset 0 1px 0 0 #797979;
+    cursor: pointer; }
+.logincard   .button-login:active {
+
+    -webkit-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee; 
+}
+.logincard .button-login:focus {
+    outline: none;
+}
+
+.logincard .signUsing {
+    width: 260px;
+    height: fit-content;
+    margin-top: 30px;
+}
+.logincard .signUsing .teks1 {
+    font-family: 'Montserrat';
+    font-size: 9px;
+    font-weight: 200;
+    color: black;
+    padding: 0 0 0 0 ;
+    margin: 0 auto 9px auto;
+    width: fit-content;
+}
+.logincard .signUsing .sosmed-register img {
+    width: 30px;
+}
+.logincard .signUsing .sosmed-register a {
+    margin-left: 8px;
+}
+.logincard .signUsing .sosmed-register {
+    width: fit-content;
+}
+
+.logincard .orCreate {
+    width: 260px;
+    height: fit-content;
+}
+
+.logincard .orCreate .mx-auto {
+    width: fit-content;
+    margin-top: 30px;
+}
+.logincard .orCreate .teks2 {
+    font-family: 'Montserrat';
+    font-size: 9px;
+    font-weight: 400;
+    color: black;
+    padding: 0 0 0 0 ;
+    width: fit-content;
+    margin: 0 5px 0 10px;
+}
+
+.logincard .orCreate .here {
+    padding: 0 0 0 0;
+    font-family: 'Montserrat' ;
+    font-size: 10px;
+    font-weight: 700;
+    width: fit-content;
+    height: fit-content;
+    color:black;
+
+}
+.logincard .orCreate .here:hover {
+    text-decoration: none;
+    color: blue;
+}
+

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="292 2041 18 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ccc2a2;
+      }
+    </style>
+  </defs>
+  <g id="button-compare" transform="translate(-30)">
+    <circle id="Ellipse_3" data-name="Ellipse 3" class="cls-1" cx="9" cy="9" r="9" transform="translate(322 2041)"/>
+    <g id="sync" transform="translate(323.999 2042.625)">
+      <path id="Path_1" data-name="Path 1" d="M14.943,6.725a.356.356,0,0,0-.5,0l-.817.817A5.689,5.689,0,0,0,2.906,5.033a.356.356,0,0,0,.628.333,4.977,4.977,0,0,1,9.377,2.172L12.1,6.725a.355.355,0,0,0-.5.5l1.422,1.422a.357.357,0,0,0,.5,0l1.422-1.422a.356.356,0,0,0,0-.5Z" transform="translate(-0.828)"/>
+      <path id="Path_2" data-name="Path 2" d="M11.993,11.741a.356.356,0,0,0-.481.148A4.977,4.977,0,0,1,2.135,9.717l.813.813a.356.356,0,1,0,.5-.5L2.029,8.6a.356.356,0,0,0-.5,0L.1,10.027a.355.355,0,1,0,.5.5l.817-.817a5.689,5.689,0,0,0,10.717,2.509.356.356,0,0,0-.148-.481Z" transform="translate(0 -1.879)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,251 @@
+.card {
+    width: 712px;
+    height: 523px;
+    margin-top: 150px;
+    border-radius: 8px;
+    border-width: 0 0 0 0;
+    box-shadow: 5px 10px 10px rgba(0,0,0,0.30);
+    background: whitesmoke;
+    margin-bottom: 350px;
+
+}
+
+.card .card-body {
+    margin: 0 0 0 0 ;
+    padding: 0 0 0 0;
+}
+
+.card-body .registerImage {
+    background: url(../images/register-img2.svg);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-width: 0 0 0 0;
+    width: 307px;
+    height: 523px;
+}
+
+.registerBody {
+    width: 405px;
+}
+.registerBody h2 {
+    width: fit-content;
+    margin: 47px auto 17px auto;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 23px;   
+}
+
+.registerBody h6 {
+    width: fit-content;
+    margin: 0 auto 16px auto;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 9px;   
+}
+.sosmed{
+    width: fit-content;
+}
+.sosmed a{
+    width: 30px;
+    margin-left: 8px;
+}
+.registerBody .username {
+    width: 260px;
+    height: 48.5px;
+    margin-top: 37px;
+}
+.registerBody .username p {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-family: 'Montserrat' ;
+    font-size: 10px;
+    font-weight: 700;
+    width: fit-content !important;
+    height: fit-content !important;
+}
+
+.registerBody .username .input i {
+    margin: 11px 0 0 0;
+    padding: 0 0 0 0;
+    width: 14px;
+    height: 14px;
+    color: #797979;
+
+}
+.registerBody .username .input input {
+    padding: 0 0 0px 0;
+    margin: 10px 0 11.5px 15px;
+    border-width: 0 0 0 0;
+    height: fit-content;
+    width: fit-content;
+    color: black;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    font-weight: 400;
+}
+.registerBody .username .input input::placeholder {
+    color:#797979;
+    font-size: 10px;
+    font-family: 'Montserrat';
+    font-weight: 200;
+    background-color: transparent;
+
+}
+.registerBody .username .input input:focus {
+    outline: none;
+}
+
+.registerBody .garis1 {
+    margin: 0 0 0 0px;
+}
+
+.registerBody .email {
+    width: 260px;
+    height: 48.5px;
+    margin-top: 22.5px;
+}
+.registerBody .email p {
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+    font-family: 'Montserrat' ;
+    font-size: 10px;
+    font-weight: 700;
+    width: fit-content;
+    height: fit-content;
+}
+
+.registerBody .email .input i {
+    margin: 11px 0 0 0;
+    padding: 0 0 0 0;
+    width: 15px;
+    height: 15px;
+    color: #797979;
+
+}
+.registerBody .email .input input {
+    padding: 0 0 0px 0;
+    margin: 10px 0 11.5px 15px;
+    border-width: 0 0 0 0;
+    height: fit-content;
+    width: fit-content;
+    color: black;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    font-weight: 400;
+}
+.registerBody .email .input input::placeholder {
+    color:#797979;
+    font-size: 10px;
+    font-family: 'Montserrat';
+    font-weight: 200;
+    background-color: transparent;
+
+}
+.registerBody .email .input input:focus {
+    outline: none;
+}
+.registerBody .password {
+    width: 260px;
+    height: 48.5px;
+    margin-top: 22.5px;
+}
+.registerBody .password p {
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+    font-family: 'Montserrat' ;
+    font-size: 10px;
+    font-weight: 700;
+    width: fit-content;
+    height: fit-content;
+}
+
+.registerBody .password .input i {
+    margin: 11px 0 0 0;
+    padding: 0 0 0 0;
+    width: 16px;
+    height: 16px;
+    color: #797979;
+
+}
+.registerBody .password .input input {
+    padding: 0 0 0px 0;
+    margin: 10px 0 11.5px 15px;
+    border-width: 0 0 0 0;
+    height: fit-content;
+    width: fit-content;
+    color: black;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    font-weight: 400;
+}
+.registerBody .password .input input::placeholder {
+    color:#797979;
+    font-size: 10px;
+    font-family: 'Montserrat';
+    font-weight: 200;
+    background-color: transparent;
+
+}
+.registerBody .password .input input:focus {
+    outline: none;
+}
+.registerBody .button-register {
+    background: rgb(204,194,162);
+    background: linear-gradient(342deg, rgba(204,194,162,1) 0%, rgba(255,108,0,1) 1%, rgba(204,194,162,1) 100%, rgba(255,108,0,1) 100%);
+    border-width: 0 0 0 0 ;
+  border-radius: 18px;
+  font-family: 'Montserrat' ;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  margin: 37px auto 28px auto ;
+  padding: 0 0;
+  text-align: center;
+  text-shadow: 0 -1px 1px #64799e;
+  text-transform: uppercase;
+  width: 260px; 
+  height: 24px;
+}
+
+.registerBody   .button-register:hover {
+    background-color: #9badcc;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9badcc), color-stop(100%, #687fa6));
+    background-image: -webkit-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -moz-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -ms-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -o-linear-gradient(top, #9badcc, #687fa6);
+    background-image: linear-gradient(top, #9badcc, #687fa6);
+    
+    -webkit-box-shadow: outset 0 1px 0 0 #a5b9d9;
+    box-shadow: outset 0 1px 0 0 #797979;
+    cursor: pointer; }
+.registerBody   .button-register:active {
+
+    -webkit-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee; 
+}
+.registerBody .button-register:focus {
+    outline: none;
+}
+
+.haveanAccount {
+    font-family: 'Montserrat';
+    font-size: 9px;
+    font-weight: 400;
+    color: black;
+    margin: 20px 0 0 0 ;
+}
+.haveanAccount a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+.haveanAccount a:hover {
+    color: blue;
+}
+
+
+

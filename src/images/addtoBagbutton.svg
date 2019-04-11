@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="236 533.384 34.916 35.388">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(0,0,0,0.78);
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-size: 29px;
+        font-family: Montserrat-Bold, Montserrat;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_3" data-name="Group 3" transform="translate(3 14)">
+    <g id="Ellipse_1" data-name="Ellipse 1" class="cls-1" transform="translate(233 519.856)">
+      <circle class="cls-3" cx="17.458" cy="17.458" r="17.458"/>
+      <circle class="cls-4" cx="17.458" cy="17.458" r="16.958"/>
+    </g>
+    <text id="_" data-name="+" class="cls-2" transform="translate(241.965 547.384)"><tspan x="0" y="0">+</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,519 @@
+
+
+/* Carousel Start */
+.slideCarousel {
+    margin: 141.3px auto 0 auto;
+    width: 940.69px;
+    height: 563.38px;
+}
+.carousel {
+    width: 940.69px;
+    height: 563.38px;
+}
+.slideCarousel .d-flex {
+    width: 940.69px;
+    height: 563.38px;
+}
+.detailProduct {
+    padding: 0 0 0 5px;
+    width: 352px;
+}
+.detailProduct h1 {
+    width: 168px;
+    height: 98px;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 19px;
+}
+.detailProduct p {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 400;
+    width: 312px;
+    height: fit-content;
+    margin-bottom: 9px;
+}
+.detailProduct a {
+    margin-top: 9px;
+    color: grey;
+}
+.detailProduct a:hover {
+    text-decoration: none;
+    color: blue;
+}
+.detailProduct a img {
+    width: 35px;
+}
+.detailProduct span {
+    font-family: 'Montserrat';
+    font-size: 10px;
+    font-weight: 200;
+    margin-left: 10px;
+}
+.item {
+    width: fit-content;
+}
+.item img {
+    width: 500px;
+    height: 500px;
+}
+/* Carousel End */
+
+/* Box Features */
+.Box-features .card {
+    width: 895px !important;
+    height: 133px !important;
+    margin: 250px auto 0 auto !important;
+    box-shadow: 5px 10px 10px rgba(0,0,0,0.30) !important;
+}
+.Box-features .card .card-body .Ready-stocks {
+    width: 223.5px;
+}
+.Box-features .card .card-body .Ready-stocks .content {
+    width: 223.5px;
+    border-right: 1px solid #797979;
+    margin-top: 21px;
+}
+.Box-features .card .card-body .Ready-stocks img {
+    width: 32px;
+    height: 26px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    color: grey;
+}
+.Box-features .card .card-body .Ready-stocks h5 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.Box-features .card .card-body .Ready-stocks p {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 10px;
+    color: grey;
+    padding-bottom: 5px;
+}
+.Box-features .card .card-body .Return-policy .content {
+    width: 223.5px;
+    border-right: 1px solid #797979;
+    margin-top: 21px;
+}
+.Box-features .card .card-body .Return-policy img {
+    width: 27px;
+    height: 26px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    color: grey;
+}
+.Box-features .card .card-body .Return-policy h5 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.Box-features .card .card-body .Return-policy p {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 10px;
+    color: grey;
+    padding-bottom: 5px;
+}
+.Box-features .card .card-body .support .content {
+    width: 223.5px;
+    border-right: 1px solid #797979;
+    margin-top: 21px;
+}
+.Box-features .card .card-body .support img {
+    width: 27px;
+    height: 27px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    color: grey;
+}
+.Box-features .card .card-body .support h5 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.Box-features .card .card-body .support p {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 10px;
+    color: grey;
+    padding-bottom: 5px;
+}
+.Box-features .card .card-body .Secure-payment .content {
+    width: 223.5px;
+    margin-top: 21px;
+}
+.Box-features .card .card-body .Secure-payment img {
+    width: 27px;
+    height: 27px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    color: grey;
+}
+.Box-features .card .card-body .Secure-payment h5 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.Box-features .card .card-body .Secure-payment p {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 10px;
+    color: grey;
+    padding-bottom: 5px;
+}
+
+/* Category Image */
+.Category-image {
+    width: 842.43px !important;
+    height: 368.66px !important;
+    margin-top: 150px;
+    margin-bottom: 87.3px;
+}
+
+.Category-image .Category-image1 {
+    width: 594px;
+    height: 368.66px;
+    margin-right: 14.2px;
+
+}
+.Category-image .Category-image1 .forhover1 {
+    margin-bottom: 14.1px;
+    margin-right: 14.1px;
+    width: 373.37px;
+    height: 177.27px;  
+}
+.Category-image .Category-image1 .forhover1 a .Categoryimg1{
+    width: 373.37px;
+    height: 177.27px;
+    display: block;
+
+}
+.Category-image .Category-image1 .forhover1 a .Categoryimg1:hover{
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%)
+}
+.Category-image .Category-image1 .forhover1  .cameraAnalog {
+    width: fit-content;
+    position: relative;
+    top: -56%;
+    left: 18%;
+    transition: all 0.8s ease; 
+    z-index: 10;
+}
+.Category-image .Category-image1 .forhover1  .cameraAnalog a {
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: 700;
+    color:white;
+    text-decoration: none;
+    opacity: 0;
+}
+.Category-image .Category-image1 .forhover1  .cameraAnalog a:hover {
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+.Category-image .Category-image1 .forhover2 {
+    width: 206.90px;
+    height: 177.27px; 
+}
+.Category-image .Category-image1 .forhover2 a .Categoryimg2 {
+    width: 206.90px;
+    height: 177.27px;
+    display: block;
+}
+.Category-image .Category-image1 .forhover2 a .Categoryimg2:hover {
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%)
+}
+.Category-image .Category-image1 .forhover2 .rollFilm {
+    width: fit-content;
+    position: relative;
+    left: 0%;
+    top: -70%;
+    transition: all 0.8s ease;
+    z-index: 10;
+}
+.Category-image .Category-image1 .forhover2 .rollFilm a {
+    font-family: 'Montserrat';
+    font-size: 25px;
+    font-weight: 700;
+    color:white;
+    text-decoration: none;
+    opacity: 0;
+}
+.Category-image .Category-image1 .forhover2 .rollFilm a:hover {
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+.Category-image .Category-image1 .forhover3 {
+    width: 206.90px;
+    height: 177.27px;
+    margin-right: 14.1px;
+}
+.Category-image .Category-image1 .forhover3 a .Categoryimg3 {
+    width: 206.90px;
+    height: 177.27px;
+    display: block;
+}
+.Category-image .Category-image1 .forhover3 a .Categoryimg3:hover {
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%)
+}
+.Category-image .Category-image1 .forhover3 .Lenses {
+    width: fit-content;
+    position: relative;
+    left: 0%;
+    top: -70%;
+    transition: all 0.8s ease;
+    z-index: 10;
+}
+.Category-image .Category-image1 .forhover3 .Lenses a {
+    font-family: 'Montserrat';
+    font-size: 25px;
+    font-weight: 700;
+    color:white;
+    text-decoration: none;
+    opacity:0;
+}
+.Category-image .Category-image1 .forhover3 .Lenses a:hover {
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+.Category-image .Category-image1 .forhover4 {
+    width: 373.37px;
+    height: 177.27px; 
+}
+.Category-image .Category-image1 .forhover4 a .Categoryimg4 {
+    width: 373.37px;
+    height: 177.27px; 
+    display: block;
+}
+.Category-image .Category-image1 .forhover4 a .Categoryimg4:hover {
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%)
+}
+.Category-image .Category-image1 .forhover4 .digitalCamera {
+    width: fit-content;
+    position: relative;
+    left: 20%;
+    top: -60%;
+    transition: all 0.8s ease;
+    z-index: 10;
+}
+.Category-image .Category-image1 .forhover4 .digitalCamera a {
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: 700;
+    color:white;
+    text-decoration: none;
+    opacity:0;
+}
+.Category-image .Category-image1 .forhover4 .digitalCamera a:hover {
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+.Category-image .Category-image2 .forhover5 {
+    width: 233.75px;
+    height: 368.66px;
+}
+.Category-image .Category-image2 .forhover5 a .Categoryimg5 {
+    width: 233.75px;
+    height: 368.66px;
+    display: block;
+}
+.Category-image .Category-image2 .forhover5 a .Categoryimg5:hover {
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%)
+}
+.Category-image .Category-image2 .forhover5 .videoCamera {
+    width: 154px;
+    position: relative;
+    left: 15%;
+    top: -60%;
+    transition: all 0.8s ease;
+    z-index: 10;
+}
+.Category-image .Category-image2 .forhover5 .videoCamera a {
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: 700;
+    color:white;
+    text-decoration: none;
+    opacity:0;
+}
+.Category-image .Category-image2 .forhover5 .videoCamera a:hover {
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+/* Latest Products */
+.Latest-products {
+    width: 841px;
+    height: 817px;
+    margin-bottom: 140px;
+    border: 2px solid  salmon;
+}
+.Latest-products .teks h1 {
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+.Latest-products .teks p {
+    font-family: 'Montserrat' ;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 38px;
+    width: 442px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Latest-products .content-products {
+    background: salmon ;
+    border: 1px solid greenyellow;
+    
+}
+
+/* Exclusive Hot Deals */
+.exclusiveHotDeals {
+    background: url(../images/background-exclusive-deal.svg);
+    width: 854px;
+    height: 441px;
+    border: 0.5px solid transparent;
+    margin-bottom: 228px;
+}
+.exclusiveHotDeals .teks h1 {
+    font-family: 'Montserrat';
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    margin-top: 143px;
+}
+.exclusiveHotDeals .teks p {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 200;
+    color: white;
+    margin-top: 0;
+}
+.exclusiveHotDeals .timeCard .card {
+    width: 494.47px;
+    height: 57.04px;
+    margin-top: 17px;
+    margin-bottom: 20px;
+}
+.exclusiveHotDeals .timeCard .card .card-body .days {
+    width: 123.6px;
+}
+.exclusiveHotDeals .timeCard .card .card-body .days .content {
+    width: 123.6px;
+    border-right: 1px solid #797979;
+    margin-top: 8.6px;
+}
+.exclusiveHotDeals .timeCard .card .card-body .days h5 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 0px;
+}
+.exclusiveHotDeals .timeCard .card .card-body .days p {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    color:black;
+}
+.exclusiveHotDeals .timeCard .card .card-body .hours {
+    width: 123.6px;
+}
+.exclusiveHotDeals .timeCard .card .card-body .hours .content {
+    width: 123.6px;
+    border-right: 1px solid #797979;
+    margin-top: 8.6px;
+}
+.exclusiveHotDeals .timeCard .card .card-body .hours h5 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 0px;
+}
+.exclusiveHotDeals .timeCard .card .card-body .hours p {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    color:black;
+}
+.exclusiveHotDeals .timeCard .card .card-body .minutes {
+    width: 123.6px;
+}
+.exclusiveHotDeals .timeCard .card .card-body .minutes .content {
+    width: 123.6px;
+    border-right: 0.5px solid #797979;
+    margin-top: 8.6px;
+}
+.exclusiveHotDeals .timeCard .card .card-body .minutes h5 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 0px;
+}
+.exclusiveHotDeals .timeCard .card .card-body .minutes p {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    color:black;
+}
+.exclusiveHotDeals .timeCard .card .card-body .seconds {
+    width: 123.6px;
+}
+.exclusiveHotDeals .timeCard .card .card-body .seconds .content {
+    width: 123.6px;
+    margin-top: 8.6px;
+}
+.exclusiveHotDeals .timeCard .card .card-body .seconds h5 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 0px;
+}
+.exclusiveHotDeals .timeCard .card .card-body .seconds p {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    color:black;
+}
+.exclusiveHotDeals .shopNow {
+    background: rgb(204,194,162);
+    background: linear-gradient(342deg, rgba(204,194,162,1) 0%, rgba(255,108,0,1) 1%, rgba(204,194,162,1) 100%, rgba(255,108,0,1) 100%);
+    border-width: 0 0 0 0 ;
+    border-radius: 18px;
+    font-family: 'Montserrat' ;
+    font-size: 6px;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 13px;
+    padding: 0 0;
+    text-align: center;
+    text-shadow: 0 -1px 1px #64799e;
+    text-transform: uppercase;
+    width: 56px; 
+    height: 19px;
+}
+
