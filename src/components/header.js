@@ -19,7 +19,7 @@ import {
     DropdownMenu,
     DropdownItem } from 'reactstrap';
 
-import {onLogoutUser} from '../action';
+
 
 
 class Header extends Component {
@@ -64,7 +64,7 @@ class Header extends Component {
 
         const {user} = this.props
 
-        if (user.name === '') {
+        if (user.username === '') {
             return (
                 <div class="navbarMenu">
                     <nav class=" container navbar navbar-expand-lg fixed-top" id="main-nav">
@@ -166,4 +166,4 @@ const mapStateToProps = state => {
     return {user : state.auth}
 }
 
-export default connect (mapStateToProps,{onLogoutUser})(Header) ;
+export default connect (mapStateToProps)(Header) ;

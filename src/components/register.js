@@ -86,7 +86,7 @@ class Register extends Component {
                             </div>
                             <div className="text-center">
                                 <button className="button-register mx-auto" onClick={this.onRegistertClick}>SIGN UP</button>
-                                {this.onErrorRegister()}
+                                {/* {this.onErrorRegister()} */}
                             </div>
                             <div>
                                 <p className="haveanAccount text-center">Have an Account? <Link to="/login"><span><a href="#">Log In</a></span></Link></p>

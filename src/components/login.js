@@ -44,7 +44,7 @@ class Login extends Component {
 
     render(){
         const {user} = this.props
-        if(user.name === "") {
+        if(user.username === "") {
             return (
                 <div>
                 <div className="logincard container">
@@ -71,7 +71,7 @@ class Login extends Component {
                                 <a href="#">Forget password?</a>
                             </div>
                             <button className="button-login" onClick={this.onSubmitClick}>LOGIN</button>
-                            {this.onErrorLogin()}
+                            {/* {this.onErrorLogin()} */}
                             <div className="signUsing mx-auto">
                                 <p className="teks1"> Sign In Using</p>
                                 <div className="sosmed-register mx-auto d-flex">

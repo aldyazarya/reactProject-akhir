@@ -6,7 +6,6 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import Header from './components/header'
 import Home from './components/home';
 import Login from './components/login';
-import {keepLogin} from './action' ;
 import Register from './components/register' ;
 import Shop from './components/shop' ;
 
@@ -47,4 +46,4 @@ class App extends Component {
   }
 }
 
-export default connect(null, {keepLogin}) (App)
+export default connect(null) (App)

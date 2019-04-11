@@ -17,7 +17,7 @@ export const onLoginClick = (username, password) => {
             dispatch({
                 type: 'LOGIN_SUCCESS',
                 payload: {
-                    id: res.data._id , name: res.data.username
+                    id: res.data._id , username: res.data.username
                 }
             })
             
@@ -44,7 +44,7 @@ export const onRegister = (username, email, password) => {
 
 
 export const onLogoutUser = () => {
-    cookie.remove('masihLogin')
+    cookie.remove('masihLogin', 'idLogin')
      return {
          type: 'Logout_User'
      }
