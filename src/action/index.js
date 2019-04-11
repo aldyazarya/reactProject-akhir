@@ -1,23 +1,23 @@
-import axios from 'axios'
+import axios from '../config/axios'
 import cookies from 'universal-cookie'
 
 
 const cookie = new cookies()
 
 
-export const onLogin = (email, password) => {
+export const onLoginClick = (username, password) => {
     return async dispatch => {
         try {
-            const res = await axios.post('/users/login', {email, password})
+            const res = await axios.post('/users/login', {username, password})
             console.log(res);
             
-            cookie.set('masihLogin', res.data.name, {path:'/'})
+            cookie.set('masihLogin', res.data.username, {path:'/'})
             cookie.set('idLogin', res.data._id, {path:'/'})
 
             dispatch({
                 type: 'LOGIN_SUCCESS',
                 payload: {
-                    id: res.data._id , name: res.data.name
+                    id: res.data._id , name: res.data.username
                 }
             })
             
@@ -27,7 +27,6 @@ export const onLogin = (email, password) => {
         }
     }
 }
-
 
 
 export const onRegister = (username, email, password) => {
@@ -52,18 +51,18 @@ export const onLogoutUser = () => {
 }
 
 
-export const keepLogin = (user) => {
+export const keepLogin = (username) => {
     return dispatch => {
-        axios.get('http://localhost:1996/users', {
+        axios.get('/users', {
             params: {
-                username: user
+                username: username
             }
         })
             .then(res => {
                 if(res.data.length > 0){
                     dispatch({
                         type: 'BerhasilLogin',
-                        payload: {username: user}
+                        payload: {username: username}
                     })
                 }
             })

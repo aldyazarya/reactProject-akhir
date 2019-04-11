@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
-import {onRegisterUser} from '../action'
+import {onRegister} from '../action'
 import '../css/register.css';
 import facebookLogo from '../images/facebook-logo.svg'
 import twitterLogo from '../images/twitter-logo.svg'
@@ -17,7 +17,7 @@ class Register extends Component {
         const user = this.username.value
         const email = this.email.value
         const pass = this.password.value
-        this.props.onRegisterUser(user,email,pass)
+        this.props.onRegister(user,email,pass)
     }
 
     onErrorRegister = () => {
@@ -106,4 +106,4 @@ const mapStateToProps = state => {
     return {error: state.auth.error, success:state.auth.success}
 }
 
-export default connect(mapStateToProps,{onRegisterUser})(Register)
+export default connect(mapStateToProps,{onRegister})(Register)

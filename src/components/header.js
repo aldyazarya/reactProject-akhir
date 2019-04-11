@@ -64,7 +64,7 @@ class Header extends Component {
 
         const {user} = this.props
 
-        if (user.username === '') {
+        if (user.name === '') {
             return (
                 <div class="navbarMenu">
                     <nav class=" container navbar navbar-expand-lg fixed-top" id="main-nav">

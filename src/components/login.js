@@ -16,11 +16,11 @@ import Footer from '../components/footer';
 class Login extends Component {
 
     onSubmitClick = () => {
-        const user = this.username.value ;
-        const pass = this.password.value ;
-        this.props.onLoginClick (user, pass)
-        console.log("Username:" + user);
-        console.log("Password:" + pass);
+        const username = this.username.value ;
+        const password = this.password.value ;
+        this.props.onLoginClick (username, password)
+        console.log("Username: " + username);
+        console.log("Password: " + password);
     }
 
     onErrorLogin = () => {
@@ -43,8 +43,8 @@ class Login extends Component {
 
 
     render(){
-
-        if(this.props.user.username === "") {
+        const {user} = this.props
+        if(user.name === "") {
             return (
                 <div>
                 <div className="logincard container">
