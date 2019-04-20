@@ -8,7 +8,7 @@ import Home from './components/home';
 import Login from './components/login';
 import Register from './components/register' ;
 import Shop from './components/shop' ;
-
+import {keepLogin} from '../src/action'
 
 const cookie = new cookies()
 
@@ -46,4 +46,4 @@ class App extends Component {
   }
 }
 
-export default connect(null) (App)
+export default connect(null, {keepLogin}) (App)

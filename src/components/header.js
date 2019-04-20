@@ -19,6 +19,7 @@ import {
     DropdownMenu,
     DropdownItem } from 'reactstrap';
 
+import {onLogoutUser} from '../action'
 
 
 
@@ -138,7 +139,7 @@ class Header extends Component {
                                 <DropdownMenu right>
                                 <DropdownItem divider />
                                 <Button className="dropdown-item">
-                                    Edit Profile
+                                    Profile
                                 </Button>
                                 <Button className="dropdown-item" onClick={this.props.onLogoutUser}>
                                     Log out
@@ -166,4 +167,4 @@ const mapStateToProps = state => {
     return {user : state.auth}
 }
 
-export default connect (mapStateToProps)(Header) ;
+export default connect (mapStateToProps, {onLogoutUser})(Header) ;

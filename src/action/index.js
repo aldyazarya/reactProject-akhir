@@ -44,27 +44,34 @@ export const onRegister = (username, email, password) => {
 
 
 export const onLogoutUser = () => {
-    cookie.remove('masihLogin', 'idLogin')
+    cookie.remove('masihLogin')
+    cookie.remove('idLogin')
+
      return {
-         type: 'Logout_User'
+         type: 'LOGOUT'
      }
 }
 
 
-export const keepLogin = (username) => {
-    return dispatch => {
-        axios.get('/users', {
-            params: {
-                username: username
-            }
-        })
-            .then(res => {
-                if(res.data.length > 0){
-                    dispatch({
-                        type: 'BerhasilLogin',
-                        payload: {username: username}
-                    })
-                }
-            })
+export const keepLogin = (username, id) => {
+    if (username === undefined || id === undefined) {
+      return {
+        type: "KEEP_LOGIN",
+        payload: {
+          id: "",
+          username: "",
+        
+        }
+      };
     }
-}
+  
+    return {
+      type: "KEEP_LOGIN",
+      payload: {
+        id,
+        username,
+       
+      }
+    };
+  };
+  
