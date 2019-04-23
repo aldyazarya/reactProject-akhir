@@ -22,7 +22,7 @@ import Footer from './footer';
 class Home extends React.Component {
     render() {
         return (
-            <div>
+            <div className="bg">
                 {/* carousel Start */}
                 <div className="container">
                     <div className="slideCarousel">

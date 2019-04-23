@@ -8,6 +8,8 @@ import Home from './components/home';
 import Login from './components/login';
 import Register from './components/register' ;
 import Shop from './components/shop' ;
+import Profile from './components/profile'
+import editProfile from './components/editProfile';
 import {keepLogin} from '../src/action'
 
 const cookie = new cookies()
@@ -16,15 +18,8 @@ class App extends Component {
 
    //life cycle method
    componentDidMount() {
-    //akan di jalankan sekali ketika pertama kali component di render
-    //mengambil value yang disimpan pada file cookie masihLogin
-    var userCookie = cookie.get('masihLogin')
-    // jika didapatkan username di file cookie akan memanggil function keepLogin
-    if(userCookie !== undefined) {
-      console.log("cookie ada");
-      this.props.keepLogin(userCookie)
-      
-    }
+    
+    this.props.keepLogin(cookie.get("masihLogin"), cookie.get("idLogin"))
 
   }
 
@@ -39,6 +34,8 @@ class App extends Component {
             <Route path="/login" exact component={Login}/>
             <Route path="/register" exact component={Register}/>
             <Route path="/shop" exact component={Shop}/>
+            <Route path="/profile" exact component={Profile}/>
+            <Route path="/editprofile" exact component={editProfile}/>
             
           </div>
       </BrowserRouter>

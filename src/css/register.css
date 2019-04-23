@@ -1,11 +1,21 @@
+.bg {
+    background-image: url(../images/background2.svg) ;
+    width: auto;
+    height: 1321px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+border: 1px solid transparent;
+}
+
 .card {
     width: 712px;
     height: 523px;
     margin-top: 150px;
-    border-radius: 8px;
+    border-radius: 0px;
     border-width: 0 0 0 0;
-    box-shadow: 5px 10px 10px rgba(0,0,0,0.30);
-    background: whitesmoke;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.30);
+    background: white;
     margin-bottom: 350px;
 
 }
@@ -17,8 +27,8 @@
 
 .card-body .registerImage {
     background: url(../images/register-img2.svg);
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
     border-width: 0 0 0 0;
     width: 307px;
     height: 523px;
@@ -32,7 +42,7 @@
     margin: 47px auto 17px auto;
     font-family: 'Montserrat';
     font-weight: 700;
-    font-size: 23px;   
+    font-size: 25px;   
 }
 
 .registerBody h6 {
@@ -40,7 +50,7 @@
     margin: 0 auto 16px auto;
     font-family: 'Montserrat';
     font-weight: 700;
-    font-size: 9px;   
+    font-size: 10px;   
 }
 .sosmed{
     width: fit-content;
@@ -58,7 +68,7 @@
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     font-family: 'Montserrat' ;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
     width: fit-content !important;
     height: fit-content !important;
@@ -81,12 +91,12 @@
     color: black;
     background-color: transparent;
     font-family: 'Montserrat';
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 400;
 }
 .registerBody .username .input input::placeholder {
     color:#797979;
-    font-size: 10px;
+    font-size: 13px;
     font-family: 'Montserrat';
     font-weight: 200;
     background-color: transparent;
@@ -109,7 +119,7 @@
     margin:0 0 0 0;
     padding: 0 0 0 0;
     font-family: 'Montserrat' ;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
     width: fit-content;
     height: fit-content;
@@ -132,12 +142,12 @@
     color: black;
     background-color: transparent;
     font-family: 'Montserrat';
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 400;
 }
 .registerBody .email .input input::placeholder {
     color:#797979;
-    font-size: 10px;
+    font-size: 13px;
     font-family: 'Montserrat';
     font-weight: 200;
     background-color: transparent;
@@ -155,7 +165,7 @@
     margin:0 0 0 0;
     padding: 0 0 0 0;
     font-family: 'Montserrat' ;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
     width: fit-content;
     height: fit-content;
@@ -178,12 +188,12 @@
     color: black;
     background-color: transparent;
     font-family: 'Montserrat';
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 400;
 }
 .registerBody .password .input input::placeholder {
     color:#797979;
-    font-size: 10px;
+    font-size: 13px;
     font-family: 'Montserrat';
     font-weight: 200;
     background-color: transparent;
@@ -193,10 +203,9 @@
     outline: none;
 }
 .registerBody .button-register {
-    background: rgb(204,194,162);
-    background: linear-gradient(342deg, rgba(204,194,162,1) 0%, rgba(255,108,0,1) 1%, rgba(204,194,162,1) 100%, rgba(255,108,0,1) 100%);
+    background: #FFCA55;
     border-width: 0 0 0 0 ;
-  border-radius: 18px;
+  border-radius: 0px;
   font-family: 'Montserrat' ;
   font-size: 12px;
   font-weight: 700;
@@ -211,7 +220,7 @@
 }
 
 .registerBody   .button-register:hover {
-    background-color: #9badcc;
+    background-color: #FF6C00;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9badcc), color-stop(100%, #687fa6));
     background-image: -webkit-linear-gradient(top, #9badcc, #687fa6);
     background-image: -moz-linear-gradient(top, #9badcc, #687fa6);
@@ -233,7 +242,7 @@
 
 .haveanAccount {
     font-family: 'Montserrat';
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 400;
     color: black;
     margin: 20px 0 0 0 ;

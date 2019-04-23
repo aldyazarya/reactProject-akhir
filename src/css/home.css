@@ -1,3 +1,12 @@
+.bg {
+    background-image: url(../images/background2.svg) ;
+    width: auto;
+    height: 1321px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+border: 1px solid transparent;
+}
 
 
 /* Carousel Start */

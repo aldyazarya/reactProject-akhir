@@ -1,0 +1,145 @@
+.card {
+    width: 752px;
+    height: 560px;
+    margin-top: 150px;
+    border-width: 0 0 0 0;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.30);
+    background: white;
+    margin-bottom: 200px;
+}
+
+.card .card-body{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.card .card-body .side-profile {
+    border-right: 2px solid #797979;
+    width: 240px;
+    height: 459px;
+    margin: 51px 0 50px 39px;
+    padding-top: 12px;
+}
+.card .card-body .side-profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 47px;
+}
+.card .card-body .side-profile .user i {
+    padding: 0 0 0 0;
+    width: 22.21px;
+    height: 21.26px;
+    color: #797979;
+    margin-right: 18.7px;
+}
+.card .card-body .side-profile .email i {
+    width: 22.35px;
+    height: 16.76px;
+    color: #797979;
+    margin-right: 18.7px;
+}
+.card .card-body .side-profile .phone i {
+    padding: 0 0 0 0;
+    width: 22.54px;
+    height: 26.51px;
+    color: #797979;
+    margin-right: 18.7px;
+}
+.card .card-body .side-profile .location i {
+    width: 22.35px;
+    height: 26.89px;
+    color: #797979;
+    margin-right: 18.7px;
+}
+.card .card-body .side-profile .user h6 {
+    width: fit-content;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+.card .card-body .side-profile .email h6 {
+    width: fit-content;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+.card .card-body .side-profile .phone h6 {
+    width: fit-content;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+.card .card-body .side-profile .location h6 {
+    width: fit-content;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 15px;
+
+}
+/* .card .card-body .side-profile .d-flex{
+    margin-bottom: 24px;
+} */
+.card .card-body .side-profile .button-saveProfile {
+    background: green;
+    border-width: 0 0 0 0 ;
+    font-family: 'Montserrat';
+    font-size:  12px;
+    font-weight: 700;
+    color: white;
+    margin: 30px 45px 12px 45px;
+    width: 80.54px;
+    height: 20.62px;
+}
+.card .card-body .side-profile .button-editProfile:hover {
+    background-color: #FF6C00;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9badcc), color-stop(100%, #687fa6));
+    background-image: -webkit-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -moz-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -ms-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -o-linear-gradient(top, #9badcc, #687fa6);
+    background-image: linear-gradient(top, #9badcc, #687fa6);
+    
+    -webkit-box-shadow: outset 0 1px 0 0 #a5b9d9;
+    box-shadow: outset 0 1px 0 0 #797979;
+    cursor: pointer;
+}
+
+.card .card-body .profile {
+    margin-top: 32px;
+    margin-left: 13px;
+    width: fit-content;
+    height: fit-content;
+}
+.card .card-body .profile h6 {
+    margin-right: 18px;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #FF6C00;
+    border-bottom: 2px solid #FF6C00;
+}
+
+.card .card-body .personal-profile {
+    width: fit-content;
+    height: 392px;
+    margin-left: 36px;
+    margin-top: 34px;
+}
+.card .card-body .personal-profile h5 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+.card .card-body .personal-profile h6 {
+    font-family: 'Montserrat';
+    width: 100px;
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: 74px;
+}

@@ -46,7 +46,7 @@ class Login extends Component {
         const {user} = this.props
         if(user.username === "") {
             return (
-                <div>
+                <div className="bg">
                 <div className="logincard container">
                     <div className="card mx-auto">
                         <div className="card-body">
@@ -67,9 +67,7 @@ class Login extends Component {
                                 </div>
                                 <hr className="garis1"/>
                             </div>
-                            <div className="forgetpassword mx-auto">
-                                <a href="#">Forget password?</a>
-                            </div>
+
                             <button className="button-login" onClick={this.onSubmitClick}>LOGIN</button>
                             {/* {this.onErrorLogin()} */}
                             <div className="signUsing mx-auto">

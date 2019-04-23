@@ -47,7 +47,7 @@ class Register extends Component {
 
     render() {
         return(
-            <div>
+            <div className="bg">
             <div className="container">
                 <div className="card mx-auto">
                     <div className=" card-body d-flex">
