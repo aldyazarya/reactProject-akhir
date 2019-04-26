@@ -24,16 +24,7 @@ class Login extends Component {
     }
 
     onErrorLogin = () => {
-        if(this.props.user.error !== ''){
-            setTimeout(this.props.onSetTimeOut,3000)
-            return (
-                <div className="alert alert-danger mt-4">
-                    {this.props.user.error}
-                </div>
-            )
-        } else {
-            return null
-        }
+        
 
     }
 

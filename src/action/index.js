@@ -11,13 +11,22 @@ export const onLoginClick = (username, password) => {
             const res = await axios.post('/users/login', {username, password})
             console.log(res);
             
-            cookie.set('masihLogin', res.data.username, {path:'/'})
-            cookie.set('idLogin', res.data._id, {path:'/'})
+            if(res.data.length !== 1) {
+                return dispatch({
+                    type: 'ERROR_LOGIN',
+                    payload: {
+                        error: res.data
+                    }
+                })
+            }
+            
+            cookie.set('masihLogin', res.data[0].username, {path:'/'})
+            cookie.set('idLogin', res.data[0].id, {path:'/'})
 
             dispatch({
                 type: 'LOGIN_SUCCESS',
                 payload: {
-                    id: res.data._id , username: res.data.username
+                    id: res.data[0].id , username: res.data[0].username
                 }
             })
             
@@ -27,8 +36,6 @@ export const onLoginClick = (username, password) => {
         }
     }
 }
-
-
 export const onRegister = (username, email, password) => {
     return dispatch => {
         axios.post('/users', {
@@ -41,7 +48,17 @@ export const onRegister = (username, email, password) => {
         })
     }
 }
-
+ export const SaveProfile = (firstname, lastname, dateOfBirth, gender, email, phoneNumber, addressName, country, cityordistrict, postalCode, Address) => {
+     return dispatch => {
+         axios.post('/users', {
+            firstname, lastname, dateOfBirth, gender, email, phoneNumber, addressName, country, cityordistrict, postalCode, Address
+         }).then (res => {
+             console.log("Save Profile Success");   
+         }). catch ( e => {
+             console.log(e);    
+         })
+     }
+ }
 
 export const onLogoutUser = () => {
     cookie.remove('masihLogin')
@@ -51,8 +68,6 @@ export const onLogoutUser = () => {
          type: 'LOGOUT'
      }
 }
-
-
 export const keepLogin = (username, id) => {
     if (username === undefined || id === undefined) {
       return {

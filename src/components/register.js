@@ -14,10 +14,10 @@ import Footer from '../components/footer';
 class Register extends Component {
 
     onRegistertClick = () => {
-        const user = this.username.value
+        const username = this.username.value
         const email = this.email.value
         const pass = this.password.value
-        this.props.onRegister(user,email,pass)
+        this.props.onRegister(username,email,pass)
     }
 
     onErrorRegister = () => {

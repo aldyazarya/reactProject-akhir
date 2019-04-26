@@ -1,6 +1,7 @@
 const init = {
     id: '',
-    username: ''
+    username: '',
+    error: ''
 }
 
 export default (state = init, action) => {
@@ -10,7 +11,9 @@ export default (state = init, action) => {
         case "KEEP_LOGIN":
             return {...state, id: action.payload.id, username: action.payload.username,};
         case "LOGOUT":
-            return state = init   
+            return state = init  
+        case "ERROR_LOGIN":
+            return{...state, error: action.payload.error} 
         default:
             return state
         }
