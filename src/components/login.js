@@ -10,6 +10,7 @@ import '../css/login.css'
 import facebookLogo from '../images/facebook-logo.svg'
 import twitterLogo from '../images/twitter-logo.svg'
 import googleLogo from '../images/google-icon.svg'
+import swal from 'sweetalert'
 
 import Footer from '../components/footer';
 
@@ -21,14 +22,12 @@ class Login extends Component {
         this.props.onLoginClick (username, password)
         console.log("Username: " + username);
         console.log("Password: " + password);
+
+        // const {user} = this.props
+        // if(username !== user.username ){
+        //     return swal("Good job!", "You clicked the button!", "error");
+        // }
     }
-
-    onErrorLogin = () => {
-        
-
-    }
-
-
 
 
 

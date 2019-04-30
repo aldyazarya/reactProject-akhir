@@ -7,7 +7,6 @@ import {SaveProfile} from '../action'
 
 class editProfile extends Component {
 
-    
 
     render(){
         return(

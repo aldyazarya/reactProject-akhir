@@ -112,6 +112,7 @@ class Header extends Component {
             )
         } else {
             return(
+                <div class="navbarMenu">
                 <Navbar color="transparent" light expand="md">
                 <div className="container">
                     <NavbarBrand href="/"><img src={logobrand} alt=""/></NavbarBrand>
@@ -155,6 +156,7 @@ class Header extends Component {
                     </Collapse>
                 </div>
             </Navbar>
+            </div>
             )
         }
 

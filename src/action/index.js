@@ -1,8 +1,13 @@
 import axios from '../config/axios'
 import cookies from 'universal-cookie'
+import swal from 'sweetalert';
+import {Link} from 'react-router-dom'
 
 
 const cookie = new cookies()
+
+// const rapi = require('rajaapi')
+// const api = new rapi ({token: '03WHB5GyusKN4eOgM4jnrT2IoCEJVHJiBSkpqK8HjyEYvMH4Ti'})
 
 
 export const onLoginClick = (username, password) => {
@@ -15,7 +20,12 @@ export const onLoginClick = (username, password) => {
                 return dispatch({
                     type: 'ERROR_LOGIN',
                     payload: {
-                        error: res.data
+                        error: swal({
+                            title: "Your Account Not Verified!",
+                            text: "Please check your email to verified your account",
+                            icon: "warning",
+                            button: "OK",
+                          })
                     }
                 })
             }
@@ -41,24 +51,20 @@ export const onRegister = (username, email, password) => {
         axios.post('/users', {
             username, email, password
         }). then (res => {
-            console.log("Register Success");
+            swal({
+                title: "Your Account Has Been Created",
+                text: "",
+                icon: "success",
+                button: "OK",
+              }).then (function(){
+                  window.location = "/login"
+              })
         }).catch (e => {
             console.log(e);
             
         })
     }
 }
- export const SaveProfile = (firstname, lastname, dateOfBirth, gender, email, phoneNumber, addressName, country, cityordistrict, postalCode, Address) => {
-     return dispatch => {
-         axios.post('/users', {
-            firstname, lastname, dateOfBirth, gender, email, phoneNumber, addressName, country, cityordistrict, postalCode, Address
-         }).then (res => {
-             console.log("Save Profile Success");   
-         }). catch ( e => {
-             console.log(e);    
-         })
-     }
- }
 
 export const onLogoutUser = () => {
     cookie.remove('masihLogin')
@@ -89,4 +95,13 @@ export const keepLogin = (username, id) => {
       }
     };
   };
+
+
   
+//   api.rajaProvinsi()
+//   .then(data => {
+//     console.log(data)
+//   })
+//   .catch(Error => {
+//     console.log(Error)
+//   })
