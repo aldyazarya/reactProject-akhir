@@ -66,6 +66,7 @@ export const onRegister = (username, email, password) => {
     }
 }
 
+
 export const onLogoutUser = () => {
     cookie.remove('masihLogin')
     cookie.remove('idLogin')

@@ -142,4 +142,58 @@
     font-weight: 400;
     font-size: 12px;
     margin-right: 74px;
+    padding-top: 8px;
 }
+
+.material {
+	padding: 0;
+	border: none;
+	overflow: visible;
+}
+
+.material input {
+    box-sizing: border-box;
+		width: 100%;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		border-bottom: 1px solid #DDD;
+		font-size: 120%;
+		outline: none;
+        cursor: text;
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 12px;
+} 
+
+.form-check-input {
+    color: #FF6C00;
+    cursor: pointer;
+}
+.form-check-label{
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 700;
+    -webkit-transition: all 0.25s linear;
+    color: black;
+}
+.form-check-inline:hover {
+    color: black;
+}
+
+.dropdown {
+    border-width: 0 0 0px 0; 
+    border-radius: 0;
+    background: transparent;
+    outline: none;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: 7px;
+    position: relative;
+}
+/* .dropdown option {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+} */
