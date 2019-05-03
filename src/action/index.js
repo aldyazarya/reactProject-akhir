@@ -1,7 +1,6 @@
 import axios from '../config/axios'
 import cookies from 'universal-cookie'
 import swal from 'sweetalert';
-import {Link} from 'react-router-dom'
 
 
 const cookie = new cookies()
@@ -53,11 +52,11 @@ export const onRegister = (username, email, password) => {
         }). then (res => {
             swal({
                 title: "Your Account Has Been Created",
-                text: "",
+                text: "Complete Your Profile",
                 icon: "success",
                 button: "OK",
               }).then (function(){
-                  window.location = "/login"
+                  window.location = "/createprofile"
               })
         }).catch (e => {
             console.log(e);
@@ -66,6 +65,85 @@ export const onRegister = (username, email, password) => {
     }
 }
 
+export const saveProfile = (firstname, lastname, dateofbirth, gender, phonenumber, email, country, cityordistrict, postalcode, address) => {
+    return dispatch => {
+        axios.patch(`/profile/${cookie.get("masihLogin")}`, {
+            // username: cookie.get('masihLogin'),
+            firstname,
+            lastname,
+            dateofbirth,
+            gender,
+            phonenumber
+        }).then (
+            axios.patch(`/users/${cookie.get("masihLogin")}`,{
+                email
+            })
+        ).then (
+            axios.patch(`/address/${cookie.get("masihLogin")}`, {
+                country, cityordistrict, postalcode, address
+            })
+        ). then (res => {
+            if(firstname === '' || lastname === '' || dateofbirth === '' || gender === '' || phonenumber === '' || email === ''){
+				swal({text: "Please input all data!",
+				icon: "warning",
+				dangerMode: true})
+			} else {
+                swal({
+                    title: "Your Profile Has Been Updated",
+                    text: "",
+                    icon: "success",
+                    button: "OK",
+                  }).then (function(){
+                      window.location = "/profile"
+                  })
+
+                console.log("firstname :" + firstname, "lastname: " + lastname,
+                     "dateofbirth: " + dateofbirth,
+                    "gender : " + gender,
+                    "phonenumber :" + phonenumber);
+                
+            }
+        })
+    }
+}
+
+export const createProfile = (username, firstname, lastname, dateofbirth, gender, phonenumber) => {
+    return dispatch => {
+        axios.post('/profile/', {
+            username: cookie.get("masihLogin"),
+            firstname, lastname, dateofbirth, gender, phonenumber
+        }).then ( res => {
+            if(firstname === '' || lastname === '' || dateofbirth === '' || gender === '' || phonenumber === '' ) {
+                swal({text: "PLease input all data!",
+                icon: "warning",
+                dangerMode:true})
+            } else {
+                swal({
+                    title: "Your Profile Has Been Created",
+                    text: "",
+                    icon: "success",
+                    button: "OK",
+                  }).then (function(){
+                      window.location = "/"
+                  })
+                }
+        })
+    }
+}
+export const createAddress = (country, cityordistrict, postalcode, address) => {
+    return dispatch => {
+        axios.post('/address/', {
+            username: cookie.get("masihLogin"),
+            country, cityordistrict, postalcode, address
+        }).then (res => {
+            if( country === '' || cityordistrict === '' || postalcode === '' || address === '') {
+                swal({text: "PLease input all data!",
+                icon: "warning",
+                dangerMode:true})
+            }
+        })
+    }
+}
 
 export const onLogoutUser = () => {
     cookie.remove('masihLogin')

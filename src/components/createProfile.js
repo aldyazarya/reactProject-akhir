@@ -1,16 +1,16 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import '../css/editProfile.css'
-import avatar from '../images/categoryimg/585e4bcdcb11b227491c3396.png'
-import {saveProfile} from '../action'
+import '../css/createProfile.css'
+import {createProfile} from '../action'
+import {createAddress} from '../action'
 import axios from '../config/axios'
 import cookies from 'universal-cookie'
 import { Button, ButtonGroup} from 'reactstrap'
 
 const cookie = new cookies()
 
-class editProfile extends Component {
+class CreateProfile extends Component {
 
     state = {
         cSelected: [],
@@ -24,18 +24,18 @@ class editProfile extends Component {
     }
 
 
-    onSaveProfileClick = (e) => {
+    onCreateProfileClick = (e) => {
         const firstname = this.firstname.value
         const lastname = this.lastname.value
         const dateofbirth = this.dateofbirth.value
         const gender = this.state.rSelected
         const phonenumber = this.phonenumber.value
-        const email = this.email.value
         const country = this.country.value
         const cityordistrict = this.cityordistrict.value
         const postalcode = this.postalcode.value
         const address = this.address.value
-        this.props.saveProfile(firstname, lastname, dateofbirth, gender, phonenumber, email, country, cityordistrict, postalcode, address)
+        this.props.createProfile(firstname, lastname, dateofbirth, gender, phonenumber)
+        this.props.createAddress(country, cityordistrict, postalcode, address)
         //this.props.save address
         //this.props
     }
@@ -49,11 +49,11 @@ class editProfile extends Component {
                     <div className="card mx-auto">
                         <div className="card-body d-flex">
                             <div className="side-profile">
-                                    <button className="button-saveProfile" onClick={this.onSaveProfileClick}>Save</button>
+                                    <button className="button-saveProfile" onClick={this.onCreateProfileClick}>Create</button>
                             </div>
                             <div>
                                 <div className="profile d-flex">
-                                    <h6> Edit Profile</h6>
+                                    <h6> Create Profile</h6>
                                 </div>
                                 <div className="personal-profile">
                                     <div className="mb-3">
@@ -97,9 +97,10 @@ class editProfile extends Component {
                                         <h5>Contact</h5>
                                         <div className="d-flex">
                                             <h6>Email</h6>
-                                            <fieldset className="material">
+                                            {/* <fieldset className="material">
                                                 <input type="email" ref={input => this.email = input}></input>
-                                            </fieldset>
+                                            </fieldset> */}
+                                            <p>-</p>
                                         </div>
                                         <div className="d-flex">
                                             <h6>Phone Number</h6>
@@ -148,4 +149,4 @@ class editProfile extends Component {
     }
 }
 
-export default connect (null, {saveProfile})(editProfile);
+export default connect (null, {createProfile, createAddress})(CreateProfile);

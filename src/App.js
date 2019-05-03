@@ -10,6 +10,7 @@ import Register from './components/register' ;
 import Shop from './components/shop' ;
 import Profile from './components/profile'
 import editProfile from './components/editProfile';
+import CreateProfile from './components/createProfile'
 import {keepLogin} from '../src/action'
 
 const cookie = new cookies()
@@ -36,6 +37,7 @@ class App extends Component {
             <Route path="/shop" exact component={Shop}/>
             <Route path="/profile" exact component={Profile}/>
             <Route path="/editprofile" exact component={editProfile}/>
+            <Route path="/createprofile" exact component={CreateProfile}/>
             
           </div>
       </BrowserRouter>

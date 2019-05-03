@@ -31,7 +31,9 @@ border: 1px solid transparent;
     border-bottom-left-radius: 0px;
     border-width: 0 0 0 0;
     width: 307px;
-    height: 523px;
+    height: 560px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .registerBody {
