@@ -70,7 +70,9 @@ class Header extends Component {
                 <div class="navbarMenu">
                     <nav class=" container navbar navbar-expand-lg fixed-top" id="main-nav">
                         <div class="container">
-                            <a href="index.html" class="navbar-brand align-self-center mr-auto p-0"><img src={logobrand} alt=""/></a>
+                            <Link className="link" to="/">
+                                <a href="#logobrand" class="navbar-brand align-self-center mr-auto p-0"><img src={logobrand} alt=""/></a>
+                            </Link>
                             {/* tombol yang akan muncul ketika layar mengecil, ini burger menu */}
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbarcollapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                             {/* mendapatkan icon 3 garis dari font awesome */}
@@ -90,7 +92,7 @@ class Header extends Component {
                                     </li>
                                     <li class="nav-item align-self-center">
                                         <Link  className="link" to="/login">
-                                            <a href="#create-head-section" class="nav-link p-0">LOGIN</a>
+                                            <a href="#login" class="nav-link p-0">LOGIN</a>
                                         </Link>
                                     </li>
                                     <li class="nav-item align-self-center">
@@ -113,7 +115,7 @@ class Header extends Component {
         } else {
             return(
                 <div class="navbarMenu">
-                <Navbar color="transparent" light expand="md">
+                <nav class=" container navbar navbar-expand-lg fixed-top" id="main-nav">
                 <div className="container">
                     <NavbarBrand href="/"><img src={logobrand} alt=""/></NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
@@ -125,7 +127,9 @@ class Header extends Component {
                                 </Link>
                             </li>
                             <li class="nav-item align-self-center">
-                                <a href="#explore-head-section" class="nav-link p-0">SHOP</a>
+                                <Link className="link" to="/shop">
+                                    <a href="#explore-head-section" class="nav-link p-0">SHOP</a>
+                                </Link>
                             </li>
                             <li class="nav-item align-self-center">
                                 <a href="" class="nav-link p-0">
@@ -140,7 +144,9 @@ class Header extends Component {
                                 <DropdownMenu right>
                                 <DropdownItem divider />
                                 <Button className="dropdown-item">
-                                    Profile
+                                    <Link to="/profile">
+                                        Profile
+                                    </Link>
                                 </Button>
                                 <Button className="dropdown-item" onClick={this.props.onLogoutUser}>
                                     Log out
@@ -155,7 +161,7 @@ class Header extends Component {
                         </Nav>
                     </Collapse>
                 </div>
-            </Navbar>
+            </nav>
             </div>
             )
         }

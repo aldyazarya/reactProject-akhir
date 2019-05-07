@@ -26,7 +26,7 @@ export default (state = init, action) => {
             return state = init  
         case "ERROR_LOGIN":
             return{...state, error: action.payload.error} 
-        case "SAVE_PROFILE":
+        case "PROFILE":
             return {...state, 
                 id: action.payload.id, 
                 username: action.payload.username,
@@ -42,6 +42,7 @@ export default (state = init, action) => {
                 cityordistrict: action.payload.cityordistrict,
                 postalcode: action.payload.postalcode
                 }
+
         default:
             return state
         }

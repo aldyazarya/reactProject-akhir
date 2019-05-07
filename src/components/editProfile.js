@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import '../css/editProfile.css'
-import avatar from '../images/categoryimg/585e4bcdcb11b227491c3396.png'
 import {saveProfile} from '../action'
 import axios from '../config/axios'
 import cookies from 'universal-cookie'
@@ -23,10 +22,22 @@ class editProfile extends Component {
         console.log(rSelected); 
     }
 
+    onCreateAvatar = (e) => {
+        const data = new FormData()
+        data.append('avatar', this.image.files[0])
+        data.append('username', cookie.get("masihLogin"))
+        console.log(this.image.files[0]);
+        
+
+        axios.post('/upstore/', data). then ((response) => {
+            console.log(response);
+            
+        })
+    }
+
 
     onSaveProfileClick = (e) => {
-        const firstname = this.firstname.value
-        const lastname = this.lastname.value
+        const name = this.name.value
         const dateofbirth = this.dateofbirth.value
         const gender = this.state.rSelected
         const phonenumber = this.phonenumber.value
@@ -35,9 +46,11 @@ class editProfile extends Component {
         const cityordistrict = this.cityordistrict.value
         const postalcode = this.postalcode.value
         const address = this.address.value
-        this.props.saveProfile(firstname, lastname, dateofbirth, gender, phonenumber, email, country, cityordistrict, postalcode, address)
+        this.props.saveProfile(name, dateofbirth, gender, phonenumber, email, country, cityordistrict, postalcode, address)
         //this.props.save address
         //this.props
+        this.onCreateAvatar()
+      
     }
 
 
@@ -49,7 +62,10 @@ class editProfile extends Component {
                     <div className="card mx-auto">
                         <div className="card-body d-flex">
                             <div className="side-profile">
-                                    <button className="button-saveProfile" onClick={this.onSaveProfileClick}>Save</button>
+                                <div className="custom-file">
+                                    <input type="file" name="avatar " ref={input => this.image = input}/>
+                                </div>
+                                <button className="button-saveProfile" onClick={this.onSaveProfileClick}>Save</button>
                             </div>
                             <div>
                                 <div className="profile d-flex">
@@ -59,17 +75,12 @@ class editProfile extends Component {
                                     <div className="mb-3">
                                         <h5>Personal Profile</h5>
                                         <div className="d-flex">
-                                            <h6>First Name</h6>
+                                            <h6>Name</h6>
                                             <fieldset className="material">
-                                                <input type="text" ref={input => this.firstname = input} ></input>
+                                                <input type="text" ref={input => this.name = input} ></input>
                                             </fieldset>
                                         </div>
-                                        <div className="d-flex">
-                                            <h6>Last Name</h6>
-                                            <fieldset className="material">
-                                                <input type="text" ref={input => this.lastname = input} ></input>
-                                            </fieldset>
-                                        </div>
+                                        
                                         <div className="d-flex">
                                             <h6>Date of Birth</h6>
                                             <fieldset className="material">

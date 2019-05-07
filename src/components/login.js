@@ -45,7 +45,7 @@ class Login extends Component {
                                 <p>Username</p>
                                 <div className=" input d-flex">
                                     <i className="fas fa-user-alt"></i>
-                                    <input ref={input => {this.username= input}} type="teks" placeholder="Type your Username"/>
+                                    <input ref={input => {this.username= input}} type="teks" placeholder="Type your Username" required/>
                                 </div>
                                 <hr className="garis1"/>
                             </div>

@@ -14,8 +14,7 @@ class Profile extends Component {
     state = {
             username: '',
             email: '',
-            firstname: '',
-            lastname: '',
+            name: '',
             dateofbirth: '',
             gender: '',
             phonenumber: '',
@@ -35,8 +34,7 @@ class Profile extends Component {
             console.log(x.data);
     
             this.setState({
-                firstname: x.data[0].firstname,
-                lastname: x.data[0].lastname,
+                name: x.data[0].name,
                 dateofbirth: x.data[0].dateofbirth,
                 gender: x.data[0].gender,
                 phonenumber: x.data[0].phonenumber
@@ -123,12 +121,8 @@ class Profile extends Component {
                                     <div className="mb-3">
                                         <h5>Personal Profile</h5>
                                         <div className="d-flex">
-                                            <h6>First Name</h6>
-                                            <h5>{this.state.firstname}</h5>
-                                        </div>
-                                        <div className="d-flex">
-                                            <h6>Last Name</h6>
-                                            <h5>{this.state.lastname}</h5>
+                                            <h6>Name</h6>
+                                            <h5>{this.state.name}</h5>
                                         </div>
                                         <div className="d-flex">
                                             <h6>Date of Birth</h6>
@@ -152,10 +146,7 @@ class Profile extends Component {
                                     </div>
                                     <div className="mb-3">
                                     <h5>Address</h5>
-                                        <div className="d-flex">
-                                            <h6>Address Name</h6>
-                                            <h5>{this.state.addressname}</h5>
-                                        </div>
+                                        
                                         <div className="d-flex">
                                             <h6>Country</h6>
                                             <h5>{this.state.country}</h5>
