@@ -3,177 +3,114 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import axios from '../config/axios'
 import cookies from 'universal-cookie'
+import {API_URL} from '../API_URL/API_URL'
 
 import '../css/profile.css'
-// import avatar from '../images/categoryimg/585e4bcdcb11b227491c3396.png'
+import avatar from '../images/categoryimg/585e4bcdcb11b227491c3396.png'
 
 const cookie = new cookies()
 
 class Profile extends Component {
 
-    state = {
-            username: '',
-            email: '',
-            name: '',
-            dateofbirth: '',
-            gender: '',
-            phonenumber: '',
-            avatar: '',
-            addressname: '',
-            country: '',
-            cityordistrict: '',
-            postalcode: '',
-            address:''
-
-    }
-
-    componentDidMount(){
-        
-        axios.get(`/profile/${cookie.get("masihLogin")}`)
-        .then((x) => {
-            console.log(x.data);
-    
-            this.setState({
-                name: x.data[0].name,
-                dateofbirth: x.data[0].dateofbirth,
-                gender: x.data[0].gender,
-                phonenumber: x.data[0].phonenumber
-            })
-        }).catch()
-
-        axios.get(`/users/${cookie.get("masihLogin")}`)
-        .then((x) => {
-            console.log (x.data);
-
-            this.setState({
-                username: x.data[0].username,
-                email: x.data[0].email
-            })
-         
-        }).catch()
-
-        axios.get(`/showaddress/${cookie.get("masihLogin")}`)
-        .then((x) => {
-            console.log(x.data);
-            
-            this.setState({
-                addressname: x.data[0].addressname,
-                address: x.data[0].address,
-                country: x.data[0].country,
-                cityordistrict: x.data[0].cityordistrict,
-                postalcode: x.data[0].postalcode 
-            }) 
-        })
-
-        axios.get(`/showavatar/${cookie.get("masihLogin")}`)
-        .then((x) => {
-            console.log(x.data);// lgsung gambar
-
-            this.setState({
-                avatar: x.data
-            })
-            
-        })
-    }
+	constructor(props) {
+		super(props)
+		this.state = {
+			username: '',
+			name: '',
+			dateofbirth: '',
+			gender: '',
+			email: '',
+			phonenumber: '',
+			country: '',
+			city: '',
+			postalcode: '',
+			address: '',
+			avatar: ''
+		}
+	}
 
 
+	async componentDidMount(){
+		const res = await axios.get(`${API_URL}/users/${cookie.get('masihLogin')}`)
+		console.log(res.data[0]);
+
+		this.setState({
+			username: res.data[0].username,
+			name: res.data[0].name,
+			dateofbirth: res.data[0].dateofbirth,
+			gender: res.data[0].gender,
+			email: res.data[0].email,
+			phonenumber: res.data[0].phonenumber,
+			country: res.data[0].country,
+			city: res.data[0].cityordistrict,
+			postalcode: res.data[0].postalcode,
+			address: res.data[0].address,
+			avatar: res.data[0].avatar
+		})
+
+		console.log(this.state);
+	}
 
 
-
-
-
-
-
-
-    render() {
+    render(){
         return (
-            <div>
-                <div className="container">
-                    <div className="card mx-auto">
-                        <div className="card-body d-flex">
-                            <div className="side-profile">
-                                    <img src={this.state.avatar} alt="avatar"/>
-                                    <div className=" user d-flex align-content-center">
-                                        <i className="fas fa-user-alt"></i>
-                                        <h6>{this.state.username}</h6>
-                                    </div>
-                                    <div className=" email d-flex">
-                                        <i className="fas fa-envelope"></i>
-                                        <h6>{this.state.email}</h6>
-                                    </div>
-                                    <div className=" phone d-flex">
-                                        <i className="fas fa-mobile-alt"></i>
-                                        <h6>{this.state.phonenumber}</h6>
-                                    </div>
-                                    <div className="location d-flex">
-                                        <i className="fas fa-map-marker-alt"></i>
-                                        <h6>{this.state.address}</h6>
-                                    </div>
-                                    <Link to="/editprofile"><button className="button-editProfile">Edit Profile</button></Link>
+            <div className="container">
+                <div className="banner-info d-flex mx-auto">
+				<div className="col-md-7 header-right my-auto">
+					<h1>{this.state.username}</h1>
+					<div>
+						<h6>button untuk wishlist dan cart</h6>
+					{/* button edit profile */}
+					</div>
+					<ul className="address">
+						<div className="d-flex data-profil">
+							<div className="data-profil-label">
+								<h5>PERSONAL INFORMATION</h5>
+								<h6>NAME</h6>
+								<h6>DATE OF BIRTH</h6>
+								<h6>GENDER</h6>
+								<h5>CONTACT</h5>
+								<h6>EMAIL</h6>
+								<h6>PHONE NUMBER</h6>
+								<h5>ADDRESS</h5>
+								<h6>COUNTRY</h6>
+								<h6>CITY</h6>
+								<h6>POSTAL CODE</h6>
+								<h6>ADDRESS</h6>
+							</div>
+							<div className="data-profil-content">
+								<h5>PERSONAL</h5>
+								<h6>{this.state.name}</h6>
+								<h6>{this.state.dateofbirth}</h6>
+								<h6>{this.state.gender}</h6>
+								<h5>CONTACT</h5>
+								<h6>{this.state.email}</h6>
+								<h6>{this.state.phonenumber}</h6>
+								<h5>ADDRESS</h5>
+								<h6>{this.state.country}</h6>
+								<h6>{this.state.city}</h6>
+								<h6>{this.state.postalcode}</h6>
+								<h6>{this.state.address}</h6>
+							</div>
+						</div>	
+					</ul>
+				</div>
 
-                            </div>
-                            <div>
-                                <div className="profile d-flex">
-                                    <a href="/profile">Profile</a>
-                                    <a href="#">WishList</a>
-                                </div>
-                                <div className="personal-profile">
-                                    <div className="mb-3">
-                                        <h5>Personal Profile</h5>
-                                        <div className="d-flex">
-                                            <h6>Name</h6>
-                                            <h5>{this.state.name}</h5>
-                                        </div>
-                                        <div className="d-flex">
-                                            <h6>Date of Birth</h6>
-                                            <h5>{this.state.dateofbirth}</h5>
-                                        </div>
-                                        <div className="d-flex">
-                                            <h6>Gender</h6>
-                                            <h5>{this.state.gender}</h5>
-                                        </div>
-                                    </div>
-                                    <div className="mb-3">
-                                        <h5>Contact</h5>
-                                        <div className="d-flex">
-                                            <h6>Email</h6>
-                                            <h5>{this.state.email}</h5>
-                                        </div>
-                                        <div className="d-flex">
-                                            <h6>Phone Number</h6>
-                                            <h5>{this.state.phonenumber}</h5>
-                                        </div>
-                                    </div>
-                                    <div className="mb-3">
-                                    <h5>Address</h5>
-                                        
-                                        <div className="d-flex">
-                                            <h6>Country</h6>
-                                            <h5>{this.state.country}</h5>
-                                        </div>
-                                        <div className="d-flex">
-                                            <h6>City or District</h6>
-                                            <h5>{this.state.cityordistrict}</h5>
-                                        </div>
-                                        <div className="d-flex">
-                                            <h6>Postal Code</h6>
-                                            <h5>{this.state.postalcode}</h5>
-                                        </div>
-                                        <div className="d-flex">
-                                            <h6>Address</h6>
-                                            <h5>{this.state.address}</h5>
-                                        </div>
-                                    </div>
-                
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+				<div className="col-md-5 header-left my-auto">
+					<img src={`${API_URL}/avatar/${this.state.avatar}`} alt={this.state.username}  className="profile-picture"/>
+					<Link to ="/editprofile">
+						<button className="btn btn-primary btn-fill btn-wd btn-profile" > EDIT PROFILE</button>
+					</Link>
+				</div>
+				<div className="clearfix"> </div>		
+		      </div>
             </div>
         )
     }
+    
+
+
+
 }
 
 export default Profile;

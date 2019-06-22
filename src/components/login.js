@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link, Redirect} from 'react-router-dom' ;
 
-import {onLoginClick} from '../action' ;
+import {onLoginClick} from '../action/index' ;
 
 import {connect} from 'react-redux';
 
@@ -100,6 +100,6 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect (mapStateToProps, {onLoginClick})(Login) ;
+export default connect (mapStateToProps, {onLoginClick})(Login);
 
 

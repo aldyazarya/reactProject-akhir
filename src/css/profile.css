@@ -1,151 +1,225 @@
-.card {
-    width: 752px;
-    height: 560px;
-    margin-top: 150px;
-    border-width: 0 0 0 0;
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.30);
-    background: white;
-    margin-bottom: 200px;
+.banner-info {
+	background-attachment: scroll;
+    background-color: #e8e8e8;
+    opacity: 20%;
+    /* fill: #333333; */
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	color: black;
+	height: 600px;
+	width: 940px;
+	border: 0px none rgb(51, 51, 51);
+	border-top: 0px none rgb(51, 51, 51);
+	border-right: 0px none rgb(51, 51, 51);
+	border-bottom: 0px none rgb(51, 51, 51);
+	border-left: 0px none rgb(51, 51, 51);
+	margin: 200px 0px 0px 100px;
+	padding: 0px;
+	max-height: none;
+	min-height: 0px;
+	max-width: none;
+    min-width: 0px;
+    border-radius: 5px;	
 }
 
-.card .card-body{
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-}
-
-.card .card-body .side-profile {
-    border-right: 2px solid #797979;
-    width: 240px;
-    height: 459px;
-    margin: 51px 0 50px 39px;
-    padding-top: 12px;
-}
-.card .card-body .side-profile img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    margin-bottom: 47px;
-}
-.card .card-body .side-profile .user i {
-    padding: 0 0 0 0;
-    width: 22.21px;
-    height: 21.26px;
-    color: #797979;
-    margin-right: 18.7px;
-}
-.card .card-body .side-profile .email i {
-    width: 22.35px;
-    height: 16.76px;
-    color: #797979;
-    margin-right: 18.7px;
-}
-.card .card-body .side-profile .phone i {
-    padding: 0 0 0 0;
-    width: 22.54px;
-    height: 26.51px;
-    color: #797979;
-    margin-right: 18.7px;
-}
-.card .card-body .side-profile .location i {
-    width: 22.35px;
-    height: 26.89px;
-    color: #797979;
-    margin-right: 18.7px;
-}
-.card .card-body .side-profile .user h6 {
-    width: fit-content;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 15px;
-    margin-bottom: 24px;
-}
-.card .card-body .side-profile .email h6 {
-    width: fit-content;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 15px;
-    margin-bottom: 24px;
-}
-.card .card-body .side-profile .phone h6 {
-    width: fit-content;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 15px;
-    margin-bottom: 24px;
-}
-.card .card-body .side-profile .location h6 {
-    width: fit-content;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 15px;
+.header-right {
+	height: 454.578px;
+	width: 548.328px;
+	border: 0px none rgb(51, 51, 51);
+	border-top: 0px none rgb(51, 51, 51);
+	border-right: 0px none rgb(51, 51, 51);
+	border-bottom: 0px none rgb(51, 51, 51);
+	border-left: 0px none rgb(51, 51, 51);
+	margin: 0px;
+	padding: 0px 48px 0 48px;
+	max-height: none;
+	min-height: 1px;
+	max-width: none;
+	min-width: 0px;
 
 }
-/* .card .card-body .side-profile .d-flex{
-    margin-bottom: 24px;
-} */
-.card .card-body .side-profile .button-editProfile {
-    background: #ffca55;
-    border-width: 0 0 0 0 ;
-    font-family: 'Montserrat';
-    font-size:  12px;
-    font-weight: 700;
-    color: white;
-    margin: 30px 45px 12px 45px;
-    width: 99.54px;
-    height: 20.62px;
-}
-.card .card-body .side-profile .button-editProfile:hover {
-    background-color: #FF6C00;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9badcc), color-stop(100%, #687fa6));
-    background-image: -webkit-linear-gradient(top, #9badcc, #687fa6);
-    background-image: -moz-linear-gradient(top, #9badcc, #687fa6);
-    background-image: -ms-linear-gradient(top, #9badcc, #687fa6);
-    background-image: -o-linear-gradient(top, #9badcc, #687fa6);
-    background-image: linear-gradient(top, #9badcc, #687fa6);
-    
-    -webkit-box-shadow: outset 0 1px 0 0 #a5b9d9;
-    box-shadow: outset 0 1px 0 0 #797979;
-    cursor: pointer;
+.address {
+
+
+	/* Box */
+	height: 237px;
+	width: 452.328px;
+	/* border: ; */
+	border-top: 1px solid rgb(175, 175, 175);
+	border-right: 0px none rgb(51, 51, 51);
+	border-bottom: 0px none rgb(51, 51, 51);
+	border-left: 0px none rgb(51, 51, 51);
+	margin: 32px 0px 10px;
+	padding: 8px 0px 0px;
+	max-height: none;
+	min-height: 0px;
+	max-width: none;
+	min-width: 0px;
+	
 }
 
-.card .card-body .profile {
-    margin-top: 32px;
-    margin-left: 13px;
-    width: fit-content;
-    height: fit-content;
+.list-profile {
+	list-style: none;
+	width: fit-content;
+	height: fit-content;
 }
-.card .card-body .profile a {
-    margin-right: 18px;
-    font-family: 'Montserrat';
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    color: black;
+
+.address-text .list-profile .address-text li {
+    list-style: none;
 }
-.card .card-body .profile a:hover{
-    color: #FF6C00;
-    border-bottom: 2px solid #FF6C00;
+
+.address-text .label {
+	color: white;
+
 }
-.card .card-body .profile a:active {
-    color: #FF6C00;
-    border-bottom: 2px solid #FF6C00;
+.address-text .value-profile {
+	color: white;
+	margin-left: 30px;
 }
-.card .card-body .personal-profile {
-    width: fit-content;
-    height: 392px;
-    margin-left: 36px;
-    margin-top: 34px;
+
+.address-text {
+	/* Font & Text */
+	font-family: 'Montserrat';
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	letter-spacing: normal;
+	line-height: 22.8571px;
+	text-decoration: none solid rgb(51, 51, 51);
+	text-align: left;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: baseline;
+	white-space: normal;
+	word-spacing: 0px;
+	color: rgb(51, 51, 51);
+
+	/* Box */
+	height: fit-content;
+	width: fit-content;
+	border: 0px none rgb(51, 51, 51);
+	border-top: 0px none rgb(51, 51, 51);
+	border-right: 0px none rgb(51, 51, 51);
+	border-bottom: 0px none rgb(51, 51, 51);
+	border-left: 0px none rgb(51, 51, 51);
+	margin: 0px;
+	padding: 0px;
+	max-height: none;
+	min-height: 0px;
+	max-width: none;
+	min-width: 0px;
+
+	
 }
-.card .card-body .personal-profile h5 {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 12px;
-    margin-bottom: 12px;
+
+.address-text li {
+	width: fit-content;
+	height: fit-content;
 }
-.card .card-body .personal-profile h6 {
-    font-family: 'Montserrat';
-    width: 100px;
-    font-weight: 400;
-    font-size: 12px;
-    margin-right: 74px;
+
+.header-left {
+	
+	/* Box */
+	height: 410.656px;
+	width: 391.656px;
+	border: 0px none rgb(51, 51, 51);
+	border-top: 0px none rgb(51, 51, 51);
+	border-right: 0px none rgb(51, 51, 51);
+	border-bottom: 0px none rgb(51, 51, 51);
+	border-left: 0px none rgb(51, 51, 51);
+	margin: 0px;
+	padding-left: 48px;
+	padding-right: 48px;
+	max-height: none;
+	min-height: 1px;
+	max-width: none;
+	min-width: 0px;
+
+	/* Positioning */
+	position: relative;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	float: left;
+	display: block;
+	clear: none;
+	z-index: auto;
+
+}
+
+.profile-picture {
+	
+	height: 300.656px !important;
+	width: 300.656px !important;
+	border: 0px none rgb(51, 51, 51);
+	border-top: 0px none rgb(51, 51, 51);
+	border-right: 0px none rgb(51, 51, 51);
+	border-bottom: 0px none rgb(51, 51, 51);
+	border-left: 0px none rgb(51, 51, 51);
+	margin: 19px 0px 100px;
+	padding: 0px;
+	max-height: none;
+	min-height: 0px;
+	max-width: none;
+	min-width: 0px;
+	border-radius: 10px;
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+	display: inline;
+	clear: none;
+	z-index: auto;	
+}
+
+.data-profil {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.data-profil-label h5 {
+	color: grey;
+	margin-bottom: 15px;
+}
+.data-profil-label h6 {
+	margin-bottom: 10px;;
+}
+.data-profil-content h5 {
+	opacity: 0;
+	margin-bottom: 15px;
+}
+.data-profil-content h6 {
+	margin-bottom: 10px;
+}
+
+.header-left .btn-profile {
+	font-family : Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size : 14px;
+	line-height : 20px;
+	font-weight: bold;
+    text-decoration : none solid rgb(255, 255, 255);
+    text-align : center;
+    vertical-align : middle;
+    white-space : nowrap;
+    word-spacing : 0px;
+    /* Color & Background */
+    background-color :  #1D62F0;
+    background-position : 0% 0%;
+    color :  #FFFFFF;
+    /* Box */
+    height : 38px;
+    width : 283px;
+    border : 1px solid  #1D62F0;
+    margin : 0 0 0 10px;
+    padding : 8px 16px 8px 16px;
+    min-width : 140px;
+    /* Positioning */
+    display : inline-block;
+    /* Miscellaneous */
+    cursor : pointer;
 }

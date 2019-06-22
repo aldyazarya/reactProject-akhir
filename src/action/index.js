@@ -1,6 +1,9 @@
-import axios from '../config/axios'
+import axios from 'axios'
 import cookies from 'universal-cookie'
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
+import {API_URL} from '../API_URL/API_URL'
+// import {Redirect} from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 
 const cookie = new cookies()
@@ -9,21 +12,22 @@ const cookie = new cookies()
 // const api = new rapi ({token: '03WHB5GyusKN4eOgM4jnrT2IoCEJVHJiBSkpqK8HjyEYvMH4Ti'})
 
 
+
 export const onLoginClick = (username, password) => {
     return async dispatch => {
         try {
-            const res = await axios.post('/users/login', {username, password})
+            const res = await axios.post(`${API_URL}/users/login`, {username, password})
             console.log(res);
             
             if(res.data.length !== 1) {
                 return dispatch({
                     type: 'ERROR_LOGIN',
                     payload: {
-                        error: swal({
+                        error: Swal.fire({
                             title: "Your Account Not Verified!",
                             text: "Please check your email to verified your account",
                             icon: "warning",
-                            button: "OK",
+                            button: "OK"
                           })
                     }
                 })
@@ -47,147 +51,98 @@ export const onLoginClick = (username, password) => {
     }
 }
 export const onRegister = (username, email, password) => {
-    return dispatch => {
-        axios.post('/users', {
-            username, email, password
-        }). then (res => {
-            swal({
-                title: "Your Account Has Been Created",
-                text: "Complete Your Profile",
-                icon: "success",
-                button: "OK",
-              }).then (function(){
-                  window.location = "/createprofile"
-              })
-        }).catch (e => {
+    return async dispatch => {
+        try {
+            const res2 = await axios.post(`${API_URL}/users`, {
+                username, email, password
+            })
+            console.log(res2.data[0]);
+            
+
+            // try {
+            //     const res = await axios.get(`${API_URL}/getalluser`)
+            //     console.log(res);
+            try {
+                cookie.set('emailLogin', res2.data[0].email )
+                cookie.set('usernameLogin', res2.data[0].username )
+                cookie.set('idLogin', res2.data[0].id )
+                
+
+
+                        Swal.fire({
+                            position: 'center',
+                            type: 'success',
+                            title: 'Your Account Has Been Created',
+                            text: 'Complete Your Profile',
+                            showConfirmButton: false,
+                            // timer: 3000
+                          }).then (
+                              setTimeout(function(){
+                                  window.location.replace('/createprofile')
+                              }, 3000)
+                          )
+                
+            } catch (e){
+                console.log(e);
+                
+            }
+                            
+     
+                
+            // } catch(e) {
+            //     console.log(e);
+                
+            // }
+                
+        } catch(e) {
+            console.log(e);    
+        }
+        
+    }
+}
+
+
+
+export const onCreateProfile = (name, dateofbirth, gender, phonenumber,country, cityordistrict, postalcode, address) => {
+    return  async function () {
+        try{
+            const res2 = await axios.get(`${API_URL}/getlastuser`)
+            console.log(res2.data[0].id);
+
+            try{
+                const formData = new FormData()
+
+            // formData.append('username', cookie.get('masihLogin'))
+            formData.append("name", name)
+            formData.append("dateofbirth", dateofbirth)
+            formData.append("gender", gender)
+            formData.append("phonenumber", phonenumber)
+            formData.append("country", country)
+            formData.append("cityordistrict", cityordistrict)
+            formData.append("postalcode", postalcode)
+            formData.append("address", address)
+
+            console.log(formData);
+            
+                const res = await axios.patch(`${API_URL}/createprofile/${res2.data[0].id}`, formData)
+                console.log(res);
+                
+
+
+            } catch(e){
+                console.log(e);
+                
+            }
+        } catch (e) {
             console.log(e);
             
-        })
+        }
+        
+        
+            
+
     }
 }
-
-
-export const saveProfile = (name, dateofbirth, gender, phonenumber, email, country, cityordistrict, postalcode, address) => {
-    return dispatch => {
-        axios.patch(`/profile/${cookie.get("masihLogin")}`, {
-            // username: cookie.get('masihLogin'),
-            name,
-            dateofbirth,
-            gender,
-            phonenumber
-        }).then (
-            axios.patch(`/users/${cookie.get("masihLogin")}`,{
-                email
-            })
-        ).then (
-            axios.patch(`/address/${cookie.get("masihLogin")}`, {
-                country, cityordistrict, postalcode, address
-            })
-        ). then (res => {
-            if(name === '' || dateofbirth === '' || gender === '' || phonenumber === '' || email === ''){
-				swal({text: "Please input all data!",
-				icon: "warning",
-				dangerMode: true})
-			} else {
-                swal({
-                    title: "Your Profile Has Been Updated",
-                    text: "",
-                    icon: "success",
-                    button: "OK",
-                  }).then (function(){
-                      window.location = "/profile"
-                  })
-
-                console.log("name :" + name,
-                     "dateofbirth: " + dateofbirth,
-                    "gender : " + gender,
-                    "phonenumber :" + phonenumber);
-                
-            }
-        })
-    }
-}
-
-export const createProfile = (name, dateofbirth, gender, phonenumber) => {
-    return dispatch => {
-        axios.post('/profile/', {
-            username: cookie.get("masihLogin"),
-            name, dateofbirth, gender, phonenumber
-        }).then ( res => {
-            if(name === '' || dateofbirth === '' || gender === '' || phonenumber === '' ) {
-                swal({text: "PLease input all data!",
-                icon: "warning",
-                dangerMode:true})
-            } 
-            else {
-                swal({
-                    title: "Your Profile Has Been Created",
-                    text: "",
-                    icon: "success",
-                    button: "OK",
-                  })
-                //   .then (function(){
-                //       window.location = "/"
-                //   })
-                
-                console.log(
-                    "name: " + name,
-                    "dateofbirth: " + dateofbirth,
-                    "gender : " + gender,
-                    "phonenumber :" + phonenumber
-                    
-                );
-
-                }
-        })
-    }
-}
-export const createAddress = (country, cityordistrict, postalcode, address) => {
-    return dispatch => {
-        axios.post('/address/', {
-            username: cookie.get("masihLogin"),
-            country, cityordistrict, postalcode, address
-        }).then (res => {
-            if( country === '' || cityordistrict === '' || postalcode === '' || address === '') {
-                swal({text: "PLease input all data!",
-                icon: "warning",
-                dangerMode:true})
-            } else {
-                swal({
-                    title: "Your Profile Has Been Created",
-                    text: "",
-                    icon: "success",
-                    button: "OK",
-                  }).then(function(){
-                      window.location = "/profile"
-                  })
-                console.log(
-                    "country :" + country,
-                    "cityordistrict:" + cityordistrict,
-                    "postalcode :" + postalcode,
-                    "address :" + address 
-                );
-                
-            }
-        })
-    }
-}
-// export const createAvatar = (filename) => {
-//     return dispatch => {
-//         axios.post('/upstore/', {
-//             username: cookie.get("masihLogin"),
-//             filename
-//         }).then (res => {
-//             if(filename === ''){
-//                 swal({text: "Please input all data!",
-//             icon: "warning",
-//         dangerMode: true})
-//             }
-//         })
-//     }
-// }
-
-
 
 export const onLogoutUser = () => {
     cookie.remove('masihLogin')

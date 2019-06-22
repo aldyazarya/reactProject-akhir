@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
-import {onRegister} from '../action'
+import {onRegister} from '../action/index'
 import '../css/register.css';
 import facebookLogo from '../images/facebook-logo.svg'
 import twitterLogo from '../images/twitter-logo.svg'

@@ -11,6 +11,7 @@ import Shop from './components/shop' ;
 import Profile from './components/profile'
 import editProfile from './components/editProfile';
 import CreateProfile from './components/createProfile'
+import Wishlist from './components/wishlist'
 import {keepLogin} from '../src/action'
 
 const cookie = new cookies()
@@ -32,12 +33,13 @@ class App extends Component {
             <Header/>
 
             <Route path="/" exact component={Home}/>
-            <Route path="/login" exact component={Login}/>
-            <Route path="/register" exact component={Register}/>
-            <Route path="/shop" exact component={Shop}/>
+            <Route path="/login" component={Login}/>
+            <Route path="/register"  component={Register}/>
+            <Route path="/shop"  component={Shop}/>
             <Route path="/profile" exact component={Profile}/>
-            <Route path="/editprofile" exact component={editProfile}/>
-            <Route path="/createprofile" exact component={CreateProfile}/>
+            <Route path="/editprofile"  component={editProfile}/>
+            <Route path="/createprofile"  component={CreateProfile}/>
+            <Route path="/wishlist" component={Wishlist}/>
             
           </div>
       </BrowserRouter>
