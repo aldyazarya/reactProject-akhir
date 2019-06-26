@@ -311,7 +311,7 @@ class CreateProfile extends Component {
                                 </div>
                             </div>
                         </form>
-                        <button className="btn btn-primary btn-fill btn-wd btn-addprofile" onClick={this.onSubmitProfile}>ADD PRODUCT</button>
+                        <button className="btn btn-primary btn-fill btn-addprofile" onClick={this.onSubmitProfile}>CREATE PROFILE</button>
                     </div>
                 </div>
             </div>

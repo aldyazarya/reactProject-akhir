@@ -12,7 +12,12 @@ import Profile from './components/profile'
 import editProfile from './components/editProfile';
 import CreateProfile from './components/createProfile'
 import Wishlist from './components/wishlist'
+import productItem from './components/productItem'
 import {keepLogin} from '../src/action'
+import productdetail from './components/productDetail'
+import Cart from './components/cart'
+import Checkout from './components/checkout'
+import orderHistory from './components/orderhistory'
 
 const cookie = new cookies()
 
@@ -35,11 +40,17 @@ class App extends Component {
             <Route path="/" exact component={Home}/>
             <Route path="/login" component={Login}/>
             <Route path="/register"  component={Register}/>
-            <Route path="/shop"  component={Shop}/>
+            <Route path="/shop"  component={productItem}/>
             <Route path="/profile" exact component={Profile}/>
             <Route path="/editprofile"  component={editProfile}/>
             <Route path="/createprofile"  component={CreateProfile}/>
             <Route path="/wishlist" component={Wishlist}/>
+            <Route path="/productitem" component={productItem}/>
+            <Route path="/productdetail/:id" component={productdetail}/>
+            <Route path="/cart" component={Cart}/>
+            <Route path="/checkout" component={Checkout}/>
+            <Route path="/orderhistory" component={orderHistory}/>
+
             
           </div>
       </BrowserRouter>

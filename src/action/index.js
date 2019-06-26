@@ -183,3 +183,37 @@ export const keepLogin = (username, id) => {
 //   .catch(Error => {
 //     console.log(Error)
 //   })
+
+export const addCart = (username, product_id, quantity, total_price, price ) => {
+    return async dispatch=>{
+        try{
+            const res = await axios.post(`${API_URL}/cart/add`, {
+                username,
+                product_id,
+                quantity,
+                total_price,
+                price
+            }) 
+            console.log(res);
+            
+
+        } catch(e) {
+            console.log(e);
+        }
+    
+    }
+}
+
+export const addWishlist = (username, product_cart) => {
+    return async dispatch => {
+        try{
+            const res = await axios.post(`${API_URL}/addwishlist`, {
+                username,
+                product_cart
+            })
+        } catch(e) {
+            console.log(e);
+            
+        }
+    }
+}

@@ -13,6 +13,9 @@ import googleLogo from '../images/google-icon.svg'
 import swal from 'sweetalert'
 
 import Footer from '../components/footer';
+import cookies  from 'universal-cookie'
+
+const cookie = new cookies()
 
 class Login extends Component {
 
@@ -22,6 +25,9 @@ class Login extends Component {
         this.props.onLoginClick (username, password)
         console.log("Username: " + username);
         console.log("Password: " + password);
+
+        cookie.set("masihLogin", username)
+        // cookie.set("idLogin", username)
 
         // const {user} = this.props
         // if(username !== user.username ){
@@ -87,7 +93,7 @@ class Login extends Component {
                 
             )
         } else{
-            return <Redirect to="/"/>
+            return <Redirect to="/shop"/>
         }
 
     }

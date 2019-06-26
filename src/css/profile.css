@@ -221,5 +221,10 @@
     /* Positioning */
     display : inline-block;
     /* Miscellaneous */
-    cursor : pointer;
+	cursor : pointer;
+	width: fit-content !important;
+}
+
+.linktoeditprofile {
+	width: fit-content;
 }

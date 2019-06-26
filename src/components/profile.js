@@ -97,10 +97,14 @@ class Profile extends Component {
 				</div>
 
 				<div className="col-md-5 header-left my-auto">
-					<img src={`${API_URL}/avatar/${this.state.avatar}`} alt={this.state.username}  className="profile-picture"/>
-					<Link to ="/editprofile">
-						<button className="btn btn-primary btn-fill btn-wd btn-profile" > EDIT PROFILE</button>
-					</Link>
+					<div>
+						<img src={`${API_URL}/avatar/${this.state.avatar}`} alt={this.state.username}  className="profile-picture"/>
+					</div>
+					<div className="linktoeditprofile mx-auto">
+						<Link to ="/editprofile" className="linktoeditprofile">
+							<button className="btn mx-auto btn-primary btn-fill btn-profile" > EDIT PROFILE</button>
+						</Link>
+					</div>
 				</div>
 				<div className="clearfix"> </div>		
 		      </div>

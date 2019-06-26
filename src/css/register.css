@@ -8,9 +8,9 @@
 border: 1px solid transparent;
 }
 
-.card {
-    width: 712px;
-    height: 523px;
+.card-register {
+    width: 712px !important;
+    height: 523px !important;
     margin-top: 150px;
     border-radius: 0px;
     border-width: 0 0 0 0;
@@ -20,9 +20,11 @@ border: 1px solid transparent;
 
 }
 
-.card .card-body {
+.card-register .card-body {
     margin: 0 0 0 0 ;
     padding: 0 0 0 0;
+    width: 712px !important;
+    height: 523px !important;
 }
 
 .card-body .registerImage {
@@ -31,7 +33,7 @@ border: 1px solid transparent;
     border-bottom-left-radius: 0px;
     border-width: 0 0 0 0;
     width: 307px;
-    height: 560px;
+    height: 523px;
     background-repeat: no-repeat;
     background-size: cover;
 }

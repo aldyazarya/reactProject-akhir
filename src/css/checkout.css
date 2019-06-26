@@ -1,0 +1,133 @@
+
+
+.card {
+    width: fit-content !important;
+    height: fit-content !important;
+    margin-top: 300px;
+}
+
+
+.card-body {
+    width: 1500px !important;
+    height: fit-content !important;
+    /* margin-top: 300px !important; */
+}
+
+.checkout {
+    /* font-weight: bold; */
+    /* border: 1px solid red; */
+    margin: 100px 150px 100px 100px;
+}
+.checkout h1 {
+    font-weight: bold;
+}
+.checkout .shipping-details {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    /* border-bottom: 1px solid #e8e8e8; */
+    /* vertical-align: middle; */
+    height: 40px;
+}
+.checkout .shipping-details p {
+    color: #dddddd;
+    vertical-align: middle;
+    margin-bottom: 0 !important;
+    font-weight: bold;
+}
+.address-details p .name {
+    margin-bottom: -18px;
+    margin-right: 200px !important;
+}
+.checkout .delivery-method {
+    margin-top: 30px;
+    margin-bottom: 4px;
+    /* border-bottom: 1px solid #e8e8e8; */
+    /* vertical-align: middle; */
+    height: 40px;
+}
+.checkout .delivery-method p {
+    color: #dddddd;
+    vertical-align: middle;
+    margin-bottom: 0 !important;
+    font-weight: bold;
+}
+.checkout Button {
+    margin-bottom: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    /* border: none; */
+}
+.checkout .radio-services {
+    margin-bottom: 30px;
+    /* margin-right: 5px; */
+}
+
+.checkout .btn-wd {
+    width: 379px;
+    margin-right: 0;
+    border-radius: 5px;
+}
+.card .your-order{
+    /* border: 1px solid red; */
+    width: fit-content;
+    height: fit-content;
+    margin-top: 173px;
+}
+
+.btn-wd {
+    width: 1000px !important;
+    margin-right: 0;
+    border-radius: 5px;
+}
+
+
+.your-order .your-order-title {
+    color: #dddddd;
+    vertical-align: middle;
+    /* margin-bottom: 0 !important; */
+    font-weight: bold;
+    /* padding-bottom: 15px; */
+    /* border-bottom: 1px solid  #e8e8e8; */
+    vertical-align: middle;
+    /* margin-bottom: 0 !important; */
+    font-weight: bold;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.your-order .your-order-title a {
+    text-decoration: none;
+    color: #dddddd;
+    padding-left: 70px;
+}
+
+.your-order img {
+    margin-right: 50px;
+}
+.your-order .product-name {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 50px;
+    
+}
+.your-order .total-price {
+    /* font-weight: bold; */
+    font-size: 20px;
+    margin-right: 50px;
+    margin-left: 15px;
+    
+}
+
+
+.list-title {
+    margin-right: 350px;
+    font-weight: bold;
+}
+
+.button-proceed {
+    width: fit-content;
+}

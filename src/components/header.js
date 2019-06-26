@@ -132,9 +132,9 @@ class Header extends Component {
                                 </Link>
                             </li>
                             <li class="nav-item align-self-center">
-                                <a href="" class="nav-link p-0">
+                                <a href="/cart" class="nav-link p-0">
                                     <i class="fas fa-shopping-cart"></i>
-                                    <span>(0)</span>
+                                    
                                 </a>
                             </li>
                             <UncontrolledDropdown nav inNavbar>
@@ -146,6 +146,11 @@ class Header extends Component {
                                 <Button className="dropdown-item">
                                     <Link to="/profile">
                                         Profile
+                                    </Link>
+                                </Button>
+                                <Button className="dropdown-item">
+                                    <Link to="/orderhistory">
+                                        Order History
                                     </Link>
                                 </Button>
                                 <Button className="dropdown-item" onClick={this.props.onLogoutUser}>

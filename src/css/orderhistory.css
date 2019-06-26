@@ -1,73 +1,4 @@
-/* Place Holder CSS */
-::-webkit-input-placeholder {
-    color: #000;
-    opacity: 1
-     ;
-    -webkit-transition: opacity 0.35s ease-in-out;
-    transition: opacity 0.35s ease-in-out;
-  }
-  :-moz-placeholder {
-    color: #000;
-    opacity: 0.5;
-    -moz-transition: opacity 0.35s ease-in-out;
-    transition: opacity 0.35s ease-in-out;
-  }
-  ::-moz-placeholder {
-    color: #000;
-    opacity: 0.5;
-    -moz-transition: opacity 0.35s ease-in-out;
-    transition: opacity 0.35s ease-in-out;
-  }
-  :-ms-input-placeholder {  
-    color: #000;
-    opacity: 0.5;
-    -ms-transition: opacity 0.35s ease-in-out;
-    transition: opacity 0.35s ease-in-out;
-  }
-  
-  /* Place Holder CSS for Focus */
-  :hover::-webkit-input-placeholder {
-    opacity: 0.75;
-    -webkit-transition: opacity 0.35s ease-in-out;
-    transition: opacity 0.35s ease-in-out;
-  }
-  :hover:-moz-placeholder {
-    opacity: 0.75;
-    -moz-transition: opacity 0.35s ease-in-out;
-    transition: opacity 0.35s ease-in-out;
-  }
-  :hover::-moz-placeholder {
-    opacity: 0.75;
-    -moz-transition: opacity 0.35s ease-in-out;
-    transition: opacity 0.35s ease-in-out;
-  }
-  :hover:-ms-input-placeholder {  
-    opacity: 0.75;
-    -ms-transition: opacity 0.35s ease-in-out;
-    transition: opacity 0.35s ease-in-out;
-  }
-  
-  /* Place Holder CSS for Focus */
-  :focus::-webkit-input-placeholder {
-    opacity: 0;
-    -webkit-transition: opacity 0.35s ease-in-out;
-    transition: opacity 0.35s ease-in-out;
-  }
-  :focus:-moz-placeholder {
-    opacity: 0;
-    -moz-transition: opacity 0.35s ease-in-out;
-    transition: opacity 0.35s ease-in-out;
-  }
-  :focus::-moz-placeholder {
-    opacity: 0;
-    -moz-transition: opacity 0.35s ease-in-out;
-    transition: opacity 0.35s ease-in-out;
-  }
-  :focus:-ms-input-placeholder {  
-    opacity: 0;
-    -ms-transition: opacity 0.35s ease-in-out;
-    transition: opacity 0.35s ease-in-out;
-  }
+
 .col-md-12 {
     font-family : Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size : 14px;
@@ -105,8 +36,8 @@
         background-position : 0% 0%;
         color :  #333333;
         
-        height : 870.75px !important;
-        width : 721px !important;
+        height : 870.75px;
+        width : 721px;
         border : 1px solid  #E3E3E3;
         margin : 130px 0 30px 0;
         
@@ -342,3 +273,50 @@
     /* Miscellaneous */
     cursor : pointer;
     }
+
+    .list-payment-waiting {
+        border: 2px solid black;
+        border-radius: 5px;
+        /* background-color:; */
+        border-color: rgb(134, 136, 180);
+        padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    }
+    .list-order {
+        border: 2px solid black;
+        border-radius: 5px;
+        /* background-color:; */
+        border-color: rgb(134, 136, 180);
+        padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    }
+
+    p {
+        font-weight: bold;
+        width: 300px;
+    }
+
+    .btn-uploadpayment {
+        margin-left: 40px;
+        width: 284px;
+        margin-top: 180px;
+    }
+
+    .list-order2 {
+        padding-left: 10px;
+    }
+    .title-order {
+        font-weight: bolder;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #CCCCCC;
+        padding-bottom: 8px;
+    }
+    

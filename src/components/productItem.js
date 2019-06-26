@@ -1,34 +1,19 @@
-import React from 'react';
-import axios from 'axios'
-
-import Footer from '../components/footer'
-import generateDataProduct from './generateDataProduct/generateDataProduct'
-// import productItem from './productItem'
+import React, {Component} from 'react'
+import '../css/productItem.css'
 import {API_URL} from '../API_URL/API_URL'
-import cookies from 'universal-cookie'
-import '../css/shop.css';
+import axios from 'axios'
+import {Link} from 'react-router-dom'
+
 import buttonAddtoCart from '../images/buttonProductitem/button-add-to-cart.svg' ;
 import buttonWishlist from '../images/buttonProductitem/buttonlove.svg' ;
 import buttonViewmore from '../images/buttonProductitem/button-viewmore.svg' ;
-import {addCart} from '../action/index'
-import {connect} from 'react-redux'
-import productItem from '../components/productItem'
-import {Link} from 'react-router-dom'
-// import {addCart} from '../action/index'
 
+import generateDataProduct from './generateDataProduct/generateDataProduct'
 
-const cookie = new cookies()
-
-class Shop extends React.Component {
+class productItem extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            products: [],
-            productname: '',
-            url: '',
-            productDetail: []
-        }
         this.formatterIDR = new Intl.NumberFormat('id', {
             style: 'currency',
             currency: 'IDR',
@@ -36,9 +21,18 @@ class Shop extends React.Component {
           })
     }
 
-
-
-    async componentDidMount() {
+    state = {
+        products: [],
+        
+    }
+    
+    async componentDidMount(){
+        await this.getProduct()
+}
+    
+    getProduct = async () => {
+        // const res = await axios.get('/getproduct')
+        // console.log(res)
         const data = await generateDataProduct()
         console.log(data);
         this.setState({
@@ -46,116 +40,57 @@ class Shop extends React.Component {
         })   
         console.log(data);
 
-
-
-    }
-
-    f1 = ()=> {
-        const click = document.getElementById('button')
-        console.log(click.value);
-    }
-
-    addCart = (username, product_id, quantity, total_price ) => {
-        return async dispatch=>{
-            const {products} = this.state
-            if(products.length !== 0) {
-                var {
-                    id, price
-                } =products[0]
-            } 
-            console.log(id);
-            
-            this.f1()
-            
-            // const click = document.getElementById('button')
-            // click.value
-            try{
-                const res = await axios.post(`${API_URL}/cart/add`, {
-                    username: cookie.get("masihLogin"),
-                    product_id: id,
-                    quantity: 1,
-                    total_price: price
-                }) 
-                console.log(res);
-
-                
-                
-    
-            } catch(e) {
-                console.log(e);
-            }
-        
-        }
-    }
-
-    
-    
-
-
-
-
-    renderList = () => {
-        // this.getid()
-        // console.log(this.state.products[0].id);
         
         
-        if(this.state.products.length) {
-            return this.state.products.map(item => {
-                return (
-                    <div key={item.id}>
-                        <div className=" product-item card">
-                            <div className="card-body">
+    }
+
+
+
+
+
+
+
+    prodList = () => {
+        return this.state.products.map(product => {
+            return (
+                <div key={product.id}>
+                        <div className=" product-item">
+                            <div>
                                 <div className="img-product">
-                                    <img src={`${API_URL}/imageproduct/${item.image_product}`} alt={item.product_name} style={{width: "245px", height: "239px"}}/>
+                                    <img src={`${API_URL}/imageproduct/${product.image_product}`} alt={product.product_name} style={{width: "245px", height: "239px" }}/>
                                 </div>
-                                <h6>{item.product_name}</h6>
-                                <p>{this.formatterIDR.format(item.price)}</p>
-                                <div className="d-flex">
-                                    <button id='button' value= {item.id} type="button" key={item.id} onClick={this.addCart()} >
-                                        {/* <Link to="/productdetail" key={item.id}> */}
-                                        <img src={buttonAddtoCart} alt="button"></img>
-                                        {/* </Link> */}
-                                    </button>
+                                <h6>{product.product_name}</h6>
+                                <p>{this.formatterIDR.format(product.price)}</p>
+                                <div className="button">
+                                        <div>
+                                            <Link to={"/productdetail/" + product.id}>
+                                                <button className="btn btn-warning btn-fill btn-wd3">SEE PRODUCT</button>
+                                            </Link>
+                                        </div>
                                     
-                                    
-                                    
-                                    <a href="#">
-                                        <img src={buttonWishlist} alt="button"></img>
-                                    </a>
-                                    <a href="#">
-                                        <img src={buttonViewmore} alt="button"></img>
-                                    </a>
                                 </div>
                             </div>
-                        </div>   
-                    </div>
-                )
-            })
-        }
+                        </div>
+                   
+                </div>
+            )
+        })
     }
 
-    // renderList = () => {
-    //     // return (
-    //     //     <productItem/>
-    //     // )
-    //     this.props.detailProduct()
-    // }
 
 
 
 
 
-
-    render (){
-
-        
+    render(){
         return (
-            <div className="shop ">
+            <div>
+                <div className="shop ">
                 <div className="shop-body container-fluid">
                     <div className="d-flex">
                         
-                            <div className="card col-lg-2">
-                                <div className="card-body">
+                            <div className="card-panel col-lg-2">
+                                {/* <div className="card-body">
                                     <div className="panel-group" id="accordion">
                                         <div className="panel panel-default">
                                             <div className="panel-heading">
@@ -250,13 +185,13 @@ class Shop extends React.Component {
                                             </h4>    
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         
 
                         <div className="productContent col-lg-10">
                             <div className="row">
-                                {this.renderList()}
+                                {this.prodList()}
                             </div>
                         </div>
 
@@ -268,9 +203,9 @@ class Shop extends React.Component {
                     {/* <Footer/> */}
                 
             </div>
-        
+            </div>
         )
     }
 }
 
-export default Shop
+export default productItem

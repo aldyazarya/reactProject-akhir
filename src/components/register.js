@@ -49,7 +49,7 @@ class Register extends Component {
         return(
             <div className="bg">
             <div className="container">
-                <div className="card mx-auto">
+                <div className="card-register mx-auto">
                     <div className=" card-body d-flex">
                         <div className="registerImage"></div>
                         <div className="registerBody">
@@ -89,7 +89,7 @@ class Register extends Component {
                                 {/* {this.onErrorRegister()} */}
                             </div>
                             <div>
-                                <p className="haveanAccount text-center">Have an Account? <Link to="/login"><span><a href="#">Log In</a></span></Link></p>
+                                <p className="haveanAccount text-center mx-auto">Have an Account? <Link to="/login"><span><a href="#">Log In</a></span></Link></p>
                             </div>
                         </div>
                     </div>

@@ -1,16 +1,19 @@
 
 .shop {
     height: auto;
+    width: auto;
 }
 
 .shop-body {
     margin: 150px auto 500px auto;
+    height: auto;
+    width: auto;
 }
 
 .shop-body .card {
-    width: 250px;
+    width: 250px !important;
     height: fit-content;
-    margin: 10px 30px auto 30px;
+    margin: 10px 30px auto 0;
     background: whitesmoke;
     border-radius: 0 !important;
 }
@@ -64,8 +67,9 @@
 
 
 .productContent {
-    width: 1104px;
-    margin-left: 20px;
+    width: fit-content;
+    height: fit-content;
+    /* margin-left: 20px; */
 }
 .shop-body .product-item {
     background: white !important;

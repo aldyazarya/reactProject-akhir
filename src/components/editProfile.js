@@ -39,9 +39,6 @@ class editProfile extends Component {
         this._handleSubmit = this._handleSubmit.bind(this);
     };
 
-    showavatar = () => {
-        
-    }
     
 
     onRadioBtnClick = (rSelected) => {
@@ -326,7 +323,7 @@ class editProfile extends Component {
                                     </div>
                                 </div>
                             </form>
-                            <button className="btn btn-primary btn-fill btn-wd btn-addprofile" onClick={this.onSubmitEditProfile}>ADD PRODUCT</button>
+                            <button className="btn btn-primary btn-fill btn-addprofile" onClick={this.onSubmitEditProfile}>EDIT PROFILE</button>
                         </div>
                     </div>
                 </div>
